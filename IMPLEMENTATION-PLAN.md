@@ -74,7 +74,7 @@ This document outlines the changes that have been made to the Set in Stone Produ
    - Verify form submissions
 
 ## Next Steps
-
+- remove the stupid frekain homepage arrow
 1. Gather real images for team members and portfolio projects
 2. Plan backend implementation for form submissions and file uploads
 3. Create the legal documents for the footer links and the pages (Terms of Service, Privacy Policy, Submission Agreement, Consent Form, Production Agreement)
