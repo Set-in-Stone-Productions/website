@@ -1,0 +1,152 @@
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/700.css';
+@import '@fontsource/open-sans/400.css';
+@import '@fontsource/open-sans/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 0%; /* Black */
+    --foreground: 0 0% 100%; /* White */
+
+    --card: 0 0% 0%; /* Black */
+    --card-foreground: 0 0% 100%; /* White */
+
+    --popover: 0 0% 0%; /* Black */
+    --popover-foreground: 0 0% 100%; /* White */
+
+    --primary: 14 100% 62%; /* #FF6F3C - orange */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 0 0% 96%; /* #F5F5F5 - muted bg */
+    --secondary-foreground: 0 0% 0%; /* Black */
+
+    --muted: 0 0% 96%; /* #F5F5F5 - muted bg */
+    --muted-foreground: 0 0% 53%; /* #888888 - subtext */
+
+    --accent: 348 83% 57%; /* #E43F5A - error/highlight */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 348 83% 57%; /* #E43F5A - error/highlight */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 0 0% 96%; /* #F5F5F5 - muted bg */
+    --input: 0 0% 96%; /* #F5F5F5 - muted bg */
+    --ring: 0 0% 96%; /* #F5F5F5 - muted bg */
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-open-sans;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-[36px];
+  }
+
+  h2 {
+    @apply text-2xl sm:text-[28px];
+  }
+
+  h3 {
+    @apply text-xl sm:text-[22px];
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale {
+    animation: scale 0.3s ease-out forwards;
+  }
+
+  .animate-zoom-bg {
+    animation: zoomBg 15s ease-out forwards;
+  }
+
+  /* Interactive hover effects */
+  .hover-scale {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  .hover-primary {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  
+  .hover-primary:hover {
+    @apply bg-primary/80;
+  }
+}
+
+/* Animations keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomBg {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
