@@ -59,9 +59,20 @@ This document outlines the changes that have been made to the Set in Stone Produ
 
 ## Pending Tasks
 
-1. **Asset Replacement**:
-   - Replace AI team member images with real photos
-   - Replace portfolio project images with actual project images
+1. Style change: - remove the stupid frekain homepage arrow
+- Service:
+
+Box color change (grey change this to something less ugly) 
+Portfolio 
+
+
+Contact : 
+
+change email to jake@jbernsteinmedia.com  
+Remove office location 
+Remove phone 
+
+Style: general polish and color expirmenting with similiar colors / shadows/ gradients 
 
 2. **Backend Implementation**:
    - Set up form submission handling for the contact form
@@ -73,9 +84,11 @@ This document outlines the changes that have been made to the Set in Stone Produ
    - Ensure all links work properly
    - Verify form submissions
 
-## Next Steps
-- remove the stupid frekain homepage arrow
-1. Gather real images for team members and portfolio projects
-2. Plan backend implementation for form submissions and file uploads
+
+
+------
+Later:  
+1. Gather real images for team members and portfolio projects (Add images 
+Change “Balls of Steel” to Documentary and more) and Replace AI team member images with real photos
 3. Create the legal documents for the footer links and the pages (Terms of Service, Privacy Policy, Submission Agreement, Consent Form, Production Agreement)
 4. Deploy the updated website to production 
