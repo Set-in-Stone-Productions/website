@@ -12,7 +12,9 @@ This document outlines the changes that have been made to the Set in Stone Produ
    - Test responsive design on various screen sizes
    - Ensure all links work properly
    - Verify form submissions
+----
 
+Update Submissions page button to be more consistent with web styling 
 
 
 ------
