@@ -57,22 +57,6 @@ This document outlines the changes that have been made to the Set in Stone Produ
 
 - ✅ Fixed CSS import order in src/index.css to resolve warnings
 
-## Pending Tasks
-
-1. Style change: - remove the stupid frekain homepage arrow
-- Service:
-
-Box color change (grey change this to something less ugly) 
-Portfolio 
-
-
-Contact : 
-
-change email to jake@jbernsteinmedia.com  
-Remove office location 
-Remove phone 
-
-Style: general polish and color expirmenting with similiar colors / shadows/ gradients 
 
 2. **Backend Implementation**:
    - Set up form submission handling for the contact form

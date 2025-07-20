@@ -16,7 +16,7 @@ export function SubmissionsSection() {
           </p>
         </div>
 
-        <div className="bg-secondary/30 rounded-lg p-8 md:p-12 mb-12 border border-border animate-fade-up">
+        <div className="bg-secondary/30 rounded-lg p-8 md:p-12 mb-12 border border-border">
           <h3 className="text-xl font-bold mb-4">Submission Guidelines</h3>
           <p className="mb-6 text-muted-foreground">
             We're always looking for compelling stories and passionate creators to collaborate with. Please review our 
@@ -58,7 +58,7 @@ export function SubmissionsSection() {
           </div>
         </div>
 
-        <div className="bg-secondary/30 rounded-lg p-8 md:p-12 border border-border animate-fade-up" style={{ animationDelay: "100ms" }}>
+        <div className="bg-secondary/30 rounded-lg p-8 md:p-12 border border-border">
           <h3 className="text-xl font-bold mb-4">What We're Looking For</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -16,11 +16,11 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md shadow-2xl">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="text-xl font-poppins font-bold text-background">
+          <div className="text-xl font-poppins font-bold text-white">
             Set in Stone Productions
           </div>
 
@@ -30,14 +30,14 @@ export function Navigation() {
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-background hover:text-primary transition-colors duration-300"
+                className="text-gray-200 hover:text-orange-400 transition-colors duration-300 font-medium"
               >
                 {link.label}
               </Link>
             ))}
             <Link 
               to="/submission-form"
-              className="bg-primary text-primary-foreground hover:bg-primary/80 hover-scale px-4 py-2 rounded transition-all"
+              className="bg-orange-500 text-white hover:bg-orange-400 hover:shadow-orange-500/50 px-4 py-2 rounded-lg transition-all duration-300 font-medium border border-orange-500/30"
             >
               Submit a Project
             </Link>
@@ -45,7 +45,7 @@ export function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-background"
+            className="md:hidden text-gray-200 hover:text-orange-400 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -54,13 +54,13 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-foreground border-t border-border">
+          <div className="md:hidden bg-black/90 backdrop-blur-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block px-3 py-2 text-background hover:text-primary transition-colors duration-300"
+                  className="block px-3 py-2 text-gray-200 hover:text-orange-400 transition-colors duration-300 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -69,7 +69,7 @@ export function Navigation() {
               <div className="px-3 py-2">
               <Link 
                 to="/submission-form"
-                className="block w-full bg-primary text-primary-foreground hover:bg-primary/80 px-3 py-2 rounded transition-all text-center"
+                className="block w-full bg-orange-500 text-white hover:bg-orange-400 px-3 py-2 rounded-lg transition-all text-center font-medium border border-orange-500/30"
               >
                 Submit a Project
               </Link>

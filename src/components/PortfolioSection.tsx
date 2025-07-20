@@ -29,7 +29,7 @@ export function PortfolioSection() {
       id: 2,
       title: "Balls of Steel",
       date: "2024",
-      category: "narrative",
+      category: "documentary",
       credits: "Director: Jake Bernstein",
       image: portfolio2
     },
@@ -59,10 +59,10 @@ export function PortfolioSection() {
     <section id="portfolio" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 inline-block relative">
-            OUR PORTFOLIO
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary"></span>
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Our Portfolio
           </h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto"></div>
         </div>
 
         {/* Filter buttons - hidden for now */}
@@ -87,27 +87,28 @@ export function PortfolioSection() {
           {filteredProjects.map((project) => (
             <div 
               key={project.id} 
-              className="bg-background rounded-lg overflow-hidden shadow-lg hover-scale animate-fade-up"
+              className="bg-black/60 backdrop-blur-md rounded-lg overflow-hidden shadow-2xl hover:shadow-orange-500/20 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-500 animate-fade-up group relative"
             >
-              <div className="relative aspect-video overflow-hidden group">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative aspect-video overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/80 transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                  <button className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-400 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 font-medium">
                     View Project
                   </button>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
                 <div className="flex justify-between mb-3">
-                  <span className="text-primary">{project.date}</span>
-                  <span className="text-muted-foreground capitalize">{project.category}</span>
+                  <span className="text-orange-400">{project.date}</span>
+                  <span className="text-gray-300 capitalize">{project.category}</span>
                 </div>
-                <p className="text-muted-foreground">{project.credits}</p>
+                <p className="text-gray-200">{project.credits}</p>
               </div>
             </div>
           ))}

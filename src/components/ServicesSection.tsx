@@ -57,11 +57,11 @@ export function ServicesSection() {
     <section id="services" className="py-24 bg-background text-foreground">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 inline-block relative">
-            OUR SERVICES
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary"></span>
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Our Services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-16 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto mb-6"></div>
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
             From full-scale production to post-production wizardry, we offer comprehensive services to bring your vision to life.
           </p>
         </div>
@@ -70,23 +70,23 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div 
               key={service.title} 
-              className="p-8 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors duration-300 animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="p-8 rounded-lg bg-black/60 backdrop-blur-md hover:bg-black/70 border border-orange-500/20 hover:border-orange-500/40 shadow-2xl hover:shadow-orange-500/10 transition-all duration-200 animate-fade-up relative overflow-hidden group"
             >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-200"></div>
               <div className="flex items-center mb-6">
                 <div className="p-3 rounded-full bg-primary text-primary-foreground mr-4">
                   <service.icon size={24} />
                 </div>
-                <h3 className="text-xl font-bold">{service.title}</h3>
+                <h3 className="text-xl font-bold text-white">{service.title}</h3>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-gray-200 mb-6">
                 {service.description}
               </p>
               <ul className="space-y-2">
                 {service.items.map((item) => (
                   <li key={item} className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{item}</span>
+                    <span className="text-gray-200">{item}</span>
                   </li>
                 ))}
               </ul>
