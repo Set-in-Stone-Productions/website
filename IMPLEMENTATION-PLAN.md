@@ -61,5 +61,6 @@ Submission
 Footer:
 1. Hide twitter and facebook 
 2. Add LinkedIn
+3. Hide Production Agreement Link, Make that page private to send on a case by case basis. 
 
 /X/ = Problem for later. 
