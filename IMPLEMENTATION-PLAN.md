@@ -36,7 +36,7 @@ Home:
 About:
 1. Add space for blurb about company history and mission statement. 
 2. Replace text with submitted bios. /X/
-3. Replace portraits with submitted headshots. /X/
+3. Replace portraits with submitted headshots. Waitin on You Alden /X/
 4. Alden go crazy on his 4K pic and bio. 
 
 Portfolio 
@@ -44,8 +44,7 @@ Portfolio
 2. Add images/X/
 
 Donate 
-1. Link Donation pages /X/
-2. Hide from UI for now 
+1. Hide from UI for now.
 
 Contact 
 1. change email to contact@setinstoneproductions.com
@@ -61,6 +60,8 @@ Submission
 Footer:
 1. Hide twitter and facebook 
 2. Add LinkedIn
-3. Hide Production Agreement Link, Make that page private to send on a case by case basis. 
+3. Add Pages for Terms of Service and Privacy Policy. 
+4. Remove Production Agreement Link.
+5. Change Company Motto text.
 
 /X/ = Problem for later. 
