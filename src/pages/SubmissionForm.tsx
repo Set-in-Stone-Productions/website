@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const SubmissionForm = () => {
   return (
@@ -141,24 +143,56 @@ const SubmissionForm = () => {
                   </p>
                 </div>
 
+                {/* Legal Agreements */}
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Checkbox id="terms" className="mt-1" />
+                    <div className="flex-1">
+                      <Label htmlFor="terms" className="text-base cursor-pointer">
+                        I have read and agree to the{" "}
+                        <Link to="/terms-of-service" className="text-primary hover:text-primary/80 underline">
+                          Terms of Service
+                        </Link>
+                        {" "}and{" "}
+                        <Link to="/privacy-policy" className="text-primary hover:text-primary/80 underline">
+                          Privacy Policy
+                        </Link>
+                      </Label>
+                    </div>
+                  </div>
+                </div>
+
+                {/* E-Signature */}
+                <div className="space-y-2">
+                  <Label htmlFor="signature">Electronic Signature *</Label>
+                  <Input 
+                    id="signature" 
+                    placeholder="Type your full name as your electronic signature"
+                    className="bg-background border-border"
+                  />
+                  <p className="text-sm text-muted-foreground">
+                    By typing your name above, you are providing an electronic signature that is legally binding.
+                  </p>
+                </div>
+
                 {/* Legal Links */}
                 <div className="bg-muted/20 p-6 rounded-lg border border-border">
-                  <h3 className="font-semibold mb-3">Required Reading</h3>
+                  <h3 className="font-semibold mb-3">Required Documents</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    By submitting this form, you acknowledge that you have read and agree to our submission policies:
+                    Please review these documents before submitting:
                   </p>
                   <div className="space-y-2">
                     <a 
-                      href="/submission-agreement" 
+                      href="/documents/submission-agreement.pdf" 
                       className="text-primary hover:text-primary/80 underline block"
                     >
                       Submission Agreement
                     </a>
                     <a 
-                      href="/terms-of-service" 
+                      href="/documents/consent-form.pdf" 
                       className="text-primary hover:text-primary/80 underline block"
                     >
-                      Terms of Service
+                      Consent Form
                     </a>
                   </div>
                 </div>

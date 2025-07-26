@@ -1,4 +1,5 @@
-import { Instagram, Facebook, Twitter, Youtube, Mail } from "lucide-react";
+import { Instagram, Youtube, Mail, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -9,22 +10,19 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Set in Stone Productions</h3>
             <p className="text-muted-foreground mb-4">
-              Where vision meets execution in the art of filmmaking.
+              Crafting cinematic excellence through passion and precision.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Youtube size={20} />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href="mailto:contact@setinstoneproductions.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -38,7 +36,6 @@ export function Footer() {
               <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
               <li><a href="#portfolio" className="text-muted-foreground hover:text-primary transition-colors">Portfolio</a></li>
               <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#donate" className="text-muted-foreground hover:text-primary transition-colors">Donate</a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -47,11 +44,10 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="/documents/terms-of-service.pdf" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="/documents/privacy-policy.pdf" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><Link to="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><a href="/documents/submission-agreement.pdf" className="text-muted-foreground hover:text-primary transition-colors">Submission Agreement</a></li>
               <li><a href="/documents/consent-form.pdf" className="text-muted-foreground hover:text-primary transition-colors">Consent Form</a></li>
-              <li><a href="/documents/production-agreement.pdf" className="text-muted-foreground hover:text-primary transition-colors">Production Agreement</a></li>
             </ul>
           </div>
         </div>

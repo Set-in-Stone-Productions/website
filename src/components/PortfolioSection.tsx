@@ -1,4 +1,11 @@
 import { useState } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
@@ -23,7 +30,8 @@ export function PortfolioSection() {
       date: "2025",
       category: "narrative",
       credits: "Director: Jake Bernstein",
-      image: portfolio1
+      description: "A psychological thriller exploring the dark side of daily habits and obsessive behavior.",
+      images: [portfolio1, portfolio2]
     },
     {
       id: 2,
@@ -31,7 +39,8 @@ export function PortfolioSection() {
       date: "2024",
       category: "documentary",
       credits: "Director: Jake Bernstein",
-      image: portfolio2
+      description: "An inspiring documentary following competitive athletes pushing their physical limits.",
+      images: [portfolio3, portfolio4]
     },
     {
       id: 3,
@@ -39,7 +48,8 @@ export function PortfolioSection() {
       date: "2024",
       category: "narrative",
       credits: "Director: Alden Bernstein",
-      image: portfolio3
+      description: "A heartwarming comedy about finding passion in unexpected places.",
+      images: [portfolio5, portfolio6]
     },
     {
       id: 4,
@@ -47,7 +57,8 @@ export function PortfolioSection() {
       date: "2022",
       category: "narrative",
       credits: "Director: Jake Bernstein",
-      image: portfolio4
+      description: "An atmospheric horror film based on the works of H.P. Lovecraft.",
+      images: [portfolio1, portfolio3, portfolio5]
     }
   ];
 
@@ -82,33 +93,58 @@ export function PortfolioSection() {
           ))}
         </div>
 
-        {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+        {/* Projects List - Vertical Layout */}
+        <div className="max-w-7xl mx-auto space-y-24">
+          {filteredProjects.map((project, index) => (
             <div 
               key={project.id} 
-              className="bg-black/60 backdrop-blur-md rounded-lg overflow-hidden shadow-2xl hover:shadow-orange-500/20 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-500 animate-fade-up group relative"
+              className={`bg-black/60 backdrop-blur-md rounded-lg overflow-hidden shadow-2xl border border-orange-500/20 ${
+                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+              } flex flex-col lg:flex`}
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative aspect-video overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                  <button className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-400 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 font-medium">
-                    View Project
+              {/* Image Carousel Section */}
+              <div className="lg:w-1/2">
+                <Carousel className="w-full h-full">
+                  <CarouselContent>
+                    {project.images.map((image, imgIndex) => (
+                      <CarouselItem key={imgIndex}>
+                        <div className="relative aspect-video h-full">
+                          <img 
+                            src={image} 
+                            alt={`${project.title} - Image ${imgIndex + 1}`} 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  {project.images.length > 1 && (
+                    <>
+                      <CarouselPrevious className="bg-orange-500/80 text-white hover:bg-orange-500 border-none w-10 h-10 left-4" />
+                      <CarouselNext className="bg-orange-500/80 text-white hover:bg-orange-500 border-none w-10 h-10 right-4" />
+                    </>
+                  )}
+                </Carousel>
+              </div>
+
+              {/* Project Details Section */}
+              <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-orange-400 text-lg font-medium">{project.date}</span>
+                    <span className="text-gray-300 capitalize text-sm px-3 py-1 bg-white/10 rounded-full">{project.category}</span>
+                  </div>
+                  
+                  <h3 className="text-3xl lg:text-4xl font-bold text-white">{project.title}</h3>
+                  
+                  <p className="text-gray-200 text-lg">{project.credits}</p>
+                  
+                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                  
+                  <button className="mt-6 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-400 transition-all duration-300 font-medium inline-block w-fit">
+                    View Full Project
                   </button>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
-                <div className="flex justify-between mb-3">
-                  <span className="text-orange-400">{project.date}</span>
-                  <span className="text-gray-300 capitalize">{project.category}</span>
-                </div>
-                <p className="text-gray-200">{project.credits}</p>
               </div>
             </div>
           ))}

@@ -26,7 +26,10 @@ Later:
 5. Deploy the updated website to production
 6. Replace placeholder svgs and icons (things that appear in browser tabs or where you send to people) 
 
-------
+
+
+
+------ June 25th (should be done)
 Jake's Suggestions:
 Home:
 1. View our work button needs to route to portfolio 
@@ -37,7 +40,7 @@ About:
 1. Add space for blurb about company history and mission statement. 
 2. Replace text with submitted bios. /X/
 3. Replace portraits with submitted headshots. Waitin on You Alden /X/
-4. Alden go crazy on his 4K pic and bio. 
+4. Alden go crazy on his 4K pic and bio. todo still
 
 Portfolio 
 1. Change format to large carousel of screenshots with arrows to move. 
@@ -62,6 +65,7 @@ Footer:
 2. Add LinkedIn
 3. Add Pages for Terms of Service and Privacy Policy. 
 4. Remove Production Agreement Link.
-5. Change Company Motto text.
+5. Change Company Motto text.  /X/
 
 /X/ = Problem for later. 
+---
