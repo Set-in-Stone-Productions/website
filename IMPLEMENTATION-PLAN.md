@@ -32,40 +32,36 @@ Later:
 ------ June 25th (should be done)
 Jake's Suggestions:
 Home:
-1. View our work button needs to route to portfolio 
-2. Add space for mission statement text.
-3. Change Landing Image /X/
+1. Change Mission Statement text to:
+Our mission is to champion independent filmmakers by providing the space, support, and freedom to bring their visions to life. From concept to completion, we are committed to cinematic excellence and an unwavering dedication to honing your craft.  
+2. Change Landing Image /X/
 
 About:
-1. Add space for blurb about company history and mission statement. 
-2. Replace text with submitted bios. /X/
-3. Replace portraits with submitted headshots. Waitin on You Alden /X/
-4. Alden go crazy on his 4K pic and bio. todo still
+1. Change about statement text:
+Established in 2025, Set in Stone Productions was created by and for the next generation of filmmakers. Our company is devoted to amplifying independent voices and letting them shout their truth, to uproar art for art’s sake. Set in Stone Productions champions Gen Z who face a quantum leap in entertainment the likes of which will dwarf the invention of sound in movies. In an age where the specter of AI and shrinking opportunities are ever-present, we hold that no change, no matter how revolutionary is insurmountable. Our work challenges the next chapter of filmmaking to be the dawn of a new golden age of independent film.
 
-Portfolio 
-1. Change format to large carousel of screenshots with arrows to move. 
-2. Add images/X/
+2. Change Jake Bio text:
+Filmmaker and writer with extensive experience from micro-budget productions to established IPs. Jake founded Set in Stone Productions to uplift overlooked filmmakers and to support projects that would otherwise go unmade because nothing is truly “set in stone,” nothing is written unless you make it so.
 
-Donate 
-1. Hide from UI for now.
+3. Change Justin Bio text:
+Creative Director and Novelist specializing in expertly crafted writing with a strong passion for storytelling. 
 
-Contact 
-1. change email to contact@setinstoneproductions.com
-2. Remove office location 
-3. Remove phone 
+4. Change Alden Bio text:
+- figure it out buddy.
+
+5. Change Zach Bio text:
+- Don't know yet /X/
+
+Portfolio  
+1. Add images to projects/X/
 
 Submission
-1. Add check box for agreement to terms of service and privacy policy. 
-2. Add links to terms of service and privacy policy.
-3. Add e signature button.
-4. Add linked documents for all legal pages. /X/
+1. Add functionality to submission form
+2. Make it forward to submission@setinstoneproductions.com 
 
 Footer:
-1. Hide twitter and facebook 
-2. Add LinkedIn
-3. Add Pages for Terms of Service and Privacy Policy. 
-4. Remove Production Agreement Link.
-5. Change Company Motto text.  /X/
+1. Change Company Motto:
+   Where Visions Sharpens Creation
 
 /X/ = Problem for later. 
 ---
