@@ -63,5 +63,6 @@ Footer:
 1. Change Company Motto:
    Where Visions Sharpens Creation
 
+fix the send a message button color 
 /X/ = Problem for later. 
 ---
