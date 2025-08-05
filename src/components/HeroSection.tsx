@@ -33,8 +33,9 @@ export function HeroSection() {
           <Button 
             size="lg"
             className="bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:shadow-xl hover:shadow-primary/30 shadow-lg transition-all duration-300 ease-out px-10 py-4 text-lg font-medium tracking-wide"
+            asChild
           >
-            Submit Your Project
+            <Link to="/submission-form">Submit Your Project</Link>
           </Button>
           <Button 
             size="lg"
