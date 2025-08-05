@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Set in Stone Productions</h3>
             <p className="text-muted-foreground mb-4">
-              Crafting cinematic excellence through passion and precision.
+              Where Visions Sharpens Creation
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -46,8 +46,8 @@ export function Footer() {
             <ul className="space-y-2">
               <li><Link to="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
               <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><a href="/documents/submission-agreement.pdf" className="text-muted-foreground hover:text-primary transition-colors">Submission Agreement</a></li>
-              <li><a href="/documents/consent-form.pdf" className="text-muted-foreground hover:text-primary transition-colors">Consent Form</a></li>
+              <li><a href="/documents/submission-agreement.pdf" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Submission Agreement</a></li>
+              <li><a href="/documents/consent-form.pdf" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Consent Form</a></li>
             </ul>
           </div>
         </div>

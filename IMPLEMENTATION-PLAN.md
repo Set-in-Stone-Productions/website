@@ -32,22 +32,22 @@ Later:
 ------ June 25th (should be done)
 Jake's Suggestions:
 Home:
-1. Change Mission Statement text to:
+1. ✅ Change Mission Statement text to:
 Our mission is to champion independent filmmakers by providing the space, support, and freedom to bring their visions to life. From concept to completion, we are committed to cinematic excellence and an unwavering dedication to honing your craft.  
 2. Change Landing Image /X/
 
 About:
-1. Change about statement text:
+1. ✅ Change about statement text:
 Established in 2025, Set in Stone Productions was created by and for the next generation of filmmakers. Our company is devoted to amplifying independent voices and letting them shout their truth, to uproar art for art’s sake. Set in Stone Productions champions Gen Z who face a quantum leap in entertainment the likes of which will dwarf the invention of sound in movies. In an age where the specter of AI and shrinking opportunities are ever-present, we hold that no change, no matter how revolutionary is insurmountable. Our work challenges the next chapter of filmmaking to be the dawn of a new golden age of independent film.
 
-2. Change Jake Bio text:
+2. ✅ Change Jake Bio text:
 Filmmaker and writer with extensive experience from micro-budget productions to established IPs. Jake founded Set in Stone Productions to uplift overlooked filmmakers and to support projects that would otherwise go unmade because nothing is truly “set in stone,” nothing is written unless you make it so.
 
-3. Change Justin Bio text:
+3. ✅ Change Justin Bio text:
 Creative Director and Novelist specializing in expertly crafted writing with a strong passion for storytelling. 
 
-4. Change Alden Bio text:
-- figure it out buddy.
+4. ✅ Change Alden Bio text:
+- u add somethin buddy, idek what to put i just put something short 
 
 5. Change Zach Bio text:
 - Don't know yet /X/
@@ -56,12 +56,24 @@ Portfolio
 1. Add images to projects/X/
 
 Submission
-1. Add functionality to submission form
-2. Make it forward to submission@setinstoneproductions.com 
+1. Add functionality to submission form /X/ 
+2. Make it forward to submission@setinstoneproductions.com  /X/ 
 
 Footer:
-1. Change Company Motto:
+1. ✅ Change Company Motto:
    Where Visions Sharpens Creation
+
 
 /X/ = Problem for later. 
 ---
+
+Additional fixes completed (August 4, 2025):
+- ✅ Removed Donate page from navigation and routing
+- ✅ Fixed PDF links to prevent Edit/Sign buttons from appearing
+- ✅ Changed About page to vertical layout with larger team member cards
+- ✅ Fixed About Us paragraph formatting (split into 3 paragraphs)
+
+
+- FIXec Submissions form styling 
+- Fixed the "Send Message" button stylign on the contact page 
+- updated da style 

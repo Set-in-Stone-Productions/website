@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Services from "./pages/Services";
-import Donate from "./pages/Donate";
 import Submissions from "./pages/Submissions";
 import Contact from "./pages/Contact";
 import SubmissionForm from "./pages/SubmissionForm";
@@ -28,7 +27,6 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/donate" element={<Donate />} />
           <Route path="/submissions" element={<Submissions />} />
           <Route path="/submission-form" element={<SubmissionForm />} />
           <Route path="/contact" element={<Contact />} />

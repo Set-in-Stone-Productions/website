@@ -60,7 +60,7 @@ export function ServicesSection() {
           <h2 className="text-3xl font-bold mb-4 text-white">
             Our Services
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto mb-6"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6"></div>
           <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
             From full-scale production to post-production wizardry, we offer comprehensive services to bring your vision to life.
           </p>
@@ -70,23 +70,23 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div 
               key={service.title} 
-              className="p-8 rounded-lg bg-black/60 backdrop-blur-md hover:bg-black/70 border border-orange-500/20 hover:border-orange-500/40 shadow-2xl hover:shadow-orange-500/10 transition-all duration-200 animate-fade-up relative overflow-hidden group"
+              className="p-8 rounded-lg bg-card/60 backdrop-blur-md hover:bg-card/80 border border-border hover:border-primary/30 shadow-2xl hover:shadow-primary/10 transition-all duration-200 animate-fade-up relative overflow-hidden group film-burn"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-200"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-200"></div>
               <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full bg-primary text-primary-foreground mr-4">
+                <div className="p-3 rounded-full bg-primary text-primary-foreground transition-all duration-200 shadow-lg shadow-primary/20 mr-4 group-hover:shadow-primary/30 group-hover:scale-105">
                   <service.icon size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                <h3 className="text-xl font-bold text-foreground">{service.title}</h3>
               </div>
-              <p className="text-gray-200 mb-6">
+              <p className="text-muted-foreground mb-6">
                 {service.description}
               </p>
               <ul className="space-y-2">
                 {service.items.map((item) => (
                   <li key={item} className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span className="text-gray-200">{item}</span>
+                    <span className="text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
