@@ -24,10 +24,6 @@ export function HeroSection() {
         <p className="text-2xl md:text-3xl mb-8 text-primary font-light tracking-[0.2em] uppercase animate-fade-up animation-delay-200 drop-shadow-lg">
           Where Vision Meets Execution
         </p>
-        <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-foreground/90 animate-fade-up animation-delay-400 drop-shadow-md">
-          From concept to completion, we bring your stories to life with cinematic excellence 
-          and unwavering dedication to the craft of filmmaking.
-        </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up animation-delay-600">
           <Button 
