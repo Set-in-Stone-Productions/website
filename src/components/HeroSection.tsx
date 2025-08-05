@@ -1,6 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
+import { Link } from "react-router-dom";
 
 export function HeroSection() {
   return (
@@ -38,9 +39,10 @@ export function HeroSection() {
           <Button 
             size="lg"
             variant="outline"
-            className="border-primary/50 text-foreground hover:text-primary hover:border-primary hover:shadow-lg hover:shadow-primary/30 shadow-md backdrop-blur-sm bg-background/10 transition-all duration-200 ease-out px-8 py-3 text-lg font-medium"
+            className="border-[#D4A574]/50 text-foreground hover:text-foreground/100 hover:border-foreground/80 hover:shadow-lg hover:shadow-white/10 hover:bg-white/5 shadow-md backdrop-blur-sm bg-[#D4A574]/10 transition-all duration-300 ease-out px-8 py-3 text-lg font-medium"
+            asChild
           >
-            View Our Work
+            <Link to="/portfolio">View Our Work</Link>
           </Button>
         </div>
       </div>
