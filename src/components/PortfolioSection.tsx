@@ -6,12 +6,35 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
 import portfolio5 from "@/assets/portfolio-5.jpg";
 import portfolio6 from "@/assets/portfolio-6.jpg";
+
+// Balls of Steel images
+import ballsOfSteel1 from "@/assets/Balls of Steel/balls-of-steel-1.png";
+import ballsOfSteel2 from "@/assets/Balls of Steel/balls-of-steel-2.png";
+import ballsOfSteel3 from "@/assets/Balls of Steel/balls-of-steel-3.png";
+import ballsOfSteel4 from "@/assets/Balls of Steel/balls-of-steel-4.png";
+import ballsOfSteel5 from "@/assets/Balls of Steel/balls-of-steel-5.png";
+import ballsOfSteel6 from "@/assets/Balls of Steel/balls-of-steel-6.png";
+import ballsOfSteel7 from "@/assets/Balls of Steel/balls-of-steel-7.png";
+import ballsOfSteel8 from "@/assets/Balls of Steel/balls-of-steel-8.png";
+import ballsOfSteel9 from "@/assets/Balls of Steel/balls-of-steel-9.png";
+
+// Ex Oblivione images
+import exOblivione1 from "@/assets/Ex Oblivione/ex-oblivione-1.png";
+import exOblivione2 from "@/assets/Ex Oblivione/ex-oblivione-2.png";
+import exOblivione3 from "@/assets/Ex Oblivione/ex-oblivione-3.png";
+import exOblivione4 from "@/assets/Ex Oblivione/ex-oblivione-4.png";
+import exOblivione5 from "@/assets/Ex Oblivione/ex-oblivione-5.png";
+import exOblivione6 from "@/assets/Ex Oblivione/ex-oblivione-6.png";
+import exOblivione7 from "@/assets/Ex Oblivione/ex-oblivione-7.png";
+import exOblivione8 from "@/assets/Ex Oblivione/ex-oblivione-8.png";
+
+// Routine images
+import routine1 from "@/assets/Routine/routine-1.png";
+import routine2 from "@/assets/Routine/routine-2.png";
+import routine3 from "@/assets/Routine/routine-3.png";
+import routine4 from "@/assets/Routine/routine-4.png";
 
 export function PortfolioSection() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -31,7 +54,7 @@ export function PortfolioSection() {
       category: "narrative",
       credits: "Director: Jake Bernstein",
       description: "A psychological thriller exploring the dark side of daily habits and obsessive behavior.",
-      images: [portfolio1, portfolio2]
+      images: [routine1, routine2, routine3, routine4]
     },
     {
       id: 2,
@@ -40,7 +63,7 @@ export function PortfolioSection() {
       category: "documentary",
       credits: "Director: Jake Bernstein",
       description: "An inspiring documentary following competitive athletes pushing their physical limits.",
-      images: [portfolio3, portfolio4]
+      images: [ballsOfSteel1, ballsOfSteel2, ballsOfSteel3, ballsOfSteel4, ballsOfSteel5, ballsOfSteel6, ballsOfSteel7, ballsOfSteel8, ballsOfSteel9]
     },
     {
       id: 3,
@@ -58,7 +81,7 @@ export function PortfolioSection() {
       category: "narrative",
       credits: "Director: Jake Bernstein",
       description: "An atmospheric horror film based on the works of H.P. Lovecraft.",
-      images: [portfolio1, portfolio3, portfolio5]
+      images: [exOblivione1, exOblivione2, exOblivione3, exOblivione4, exOblivione5, exOblivione6, exOblivione7, exOblivione8]
     }
   ];
 
