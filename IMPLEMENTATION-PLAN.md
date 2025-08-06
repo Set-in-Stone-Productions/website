@@ -32,6 +32,7 @@ Later:
 ------ 
 
 Jake's Suggestions:
+
 Terms of Serivce:
 1. Change Text
    - See Email for file.
@@ -40,7 +41,7 @@ Privacy Policy:
 1. Change Text
    - See Email for file.
   
-Submission Agreement
+Submission Agreement:
 1. Change Text
    - See Email for file
 
