@@ -32,6 +32,18 @@ Later:
 ------ 
 
 Jake's Suggestions:
+Terms of Serivce:
+1. Change Text
+   - See Email for file.
+  
+Privacy Policy:
+1. Change Text
+   - See Email for file.
+  
+Submission Agreement
+1. Change Text
+   - See Email for file
+
 Home:
 1. Fix Motto on Splash Page to match footer, should read: Where Visions Sharpens Creation
 2. Change Landing Image /X/
