@@ -54,7 +54,7 @@ About:
 - Don't know yet /X/
 
 Portfolio  
-1. Add images to projects/X/
+1. Add images to projects
 2. Change Project descriptions:
    - Routine: A young man slogs through his workweek amid a mental health crisis.
    - Balls of Steel: A short documentary following an underwater welder and what comes with the most dangerous job in the world.
@@ -67,7 +67,10 @@ Portfolio
 
 Submission
 1. Add functionality to submission form
-2. Make it forward to submission@setinstoneproductions.com 
+2. Make it forward to submission@setinstoneproductions.com
+
+Footer:
+1. Link Socials /X/
 
 /X/ = Problem for later. 
 ---
