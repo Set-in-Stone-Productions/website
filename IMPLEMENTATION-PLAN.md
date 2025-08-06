@@ -57,7 +57,13 @@ Portfolio
 1. Add images to projects/X/
 2. Change Project descriptions:
    - Routine: A young man slogs through his workweek amid a mental health crisis.
-   - Balls of Steel: A short documentary following an underwater welder and what comes with the most dangerous job in the world. 
+   - Balls of Steel: A short documentary following an underwater welder and what comes with the most dangerous job in the world.
+  
+3. Add Links to "View Full Project" Button:
+- Balls of Steel: https://www.youtube.com/watch?v=5KQyB97yuno 
+- Ex Oblivione: https://www.youtube.com/watch?v=fZiMCkPndTk
+
+4. Hide "View Full Project" Button for Routine for now. 
 
 Submission
 1. Add functionality to submission form
