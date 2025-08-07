@@ -339,13 +339,12 @@ Submission Date: ${new Date().toLocaleString()}
                     Please review these documents before submitting:
                   </p>
                   <div className="space-y-2">
-                    <a 
-                      href="/documents/submission-agreement.pdf" 
+                    <Link 
+                      to="/submission-agreement" 
                       className="text-primary hover:text-primary/80 underline block"
-                      download
                     >
                       Submission Agreement
-                    </a>
+                    </Link>
                     <a 
                       href="/documents/consent-form.pdf" 
                       className="text-primary hover:text-primary/80 underline block"

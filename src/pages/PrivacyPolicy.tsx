@@ -10,110 +10,483 @@ const PrivacyPolicy = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-poppins font-bold mb-4">Privacy Policy</h1>
-            <p className="text-lg text-muted-foreground">
-              Last updated: {new Date().toLocaleDateString()}
-            </p>
           </div>
 
-          <div className="bg-card border-border rounded-lg p-8 space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold mb-4">1. Information We Collect</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Set in Stone Productions collects information you provide directly to us, including:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Name and contact information (email address, phone number)</li>
-                <li>Project submission details and related materials</li>
-                <li>Communications between you and our team</li>
-                <li>Payment and billing information for services rendered</li>
+          <div className="bg-card border-border rounded-lg p-8 text-muted-foreground leading-relaxed space-y-6">
+            <p>Effective Date: July 1, 2025.</p>
+            <p>Last Updated: July 21, 2025.</p>
+            
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">1. Introduction and Overview.</h2>
+              <p>This Privacy Policy describes Set in Stone Productions ("SIP," "we," "our," or "us") collects,
+uses, and shares information about you, and applies to your use of any website, mobile
+application, or online service location that posts a link to this Privacy Policy to our website at
+setinstoneproductions.com (is a "Site"), and all applications, features, content, and other services
+that we own, control and make available to you (collectively, with the Sites, the "Services"). If
+you are an employee or contractor, your personal information collected in those contexts will be
+subject to a separate privacy notice that we provide to you where and when appropriate.</p>
+              <p>For purposes of applicable data protection laws, Set in Stone Productions is the data controller
+with regard to the data processing described below.</p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">2. What Information We Collect.</h2>
+              <p>We and our agents, vendors, consultants, and other service providers (collectively, "Service
+Providers") collect the following categories of personal information, depending on your
+interactions with us:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Identifiers and contact information, such as your name, address, phone number, IP
+address, and email address.</li>
+                <li>Payment information, such as your credit card number, expiration date, card verification
+number, and billing address, if you make a purchase on the Sites; This is considered
+sensitive personal information and may be subject to additional privacy rights, as
+described more fully below;</li>
+                <li>Purchase, viewership, and preference information, such as the films, shows, podcasts,
+articles, and content that you search for or view and the details thereof, and the products
+and items that you browse, bid on, add to your cart, buy, or return;</li>
+                <li>Internet or other electronic network activity information when you visit the Sites or
+interact with our emails or online ads and content. For example, we use tracking tools
+like cookies and pixels to automatically collect information like device identifiers, the
+type of browser and operating system you are using, your browsing and search history on
+the Sites, what areas of the Sites you visit and for how long, what products or content you
+view and click on, what website you came from to get to us and what website you go to
+when you leave us, and your interactions with our digital ads and content on other
+websites. We also embed web beacons (also known as pixels) in the emails we send to
+you to help us understand how you interact with those messages, such as whether and
+when you opened an email or clicked on any content within the email;</li>
+                <li>Professional or employment-related information if you apply for a job, such as your
+resume/CV, work history, social/professional networking pages, and any other info you
+choose to submit with your job application. And if you engage with us in a business-to-
+business capacity on behalf of your employer, we will collect professional information
+about you, such as your employer name, job title, your business contact information, and
+records of our business correspondence and transactions with you;</li>
+                <li>Social media and third-party content provider information: If you use your login
+credentials from a social media service or third-party content provider in connection with
+our Sites, we may receive information from or send information to that service or
+provider in accordance with its terms and privacy policy and your preferences and
+settings. Information we may receive includes, for example, your name, user information,
+and content and activity on the platform. We also use social widgets (which are buttons or
+icons provided by third-party social media services and content providers) that allow you
+to interact with the services and providers when you view a webpage or mobile app
+screen. These social widgets collect browsing data.</li>
+                <li>Inferences drawn from any of the above information to create a profile about you; and</li>
+                <li>Other information that you consent to us collecting from time to time.</li>
               </ul>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4">2. How We Use Your Information</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                We use the information we collect to:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Review and respond to project submissions</li>
-                <li>Provide and improve our production services</li>
-                <li>Communicate with you about projects and opportunities</li>
-                <li>Process payments and maintain business records</li>
-                <li>Comply with legal obligations</li>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">3. How We Use Your Information.</h2>
+              <p>We may use personal information (including sensitive personal information) about you for any
+purposes consistent with this Privacy Policy or as permitted by applicable law, including to:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Manage our Sites and Services, including your registration and account;</li>
+                <li>Process and facilitate your transactions, including purchases made through our online
+stores and auctions;</li>
+                <li>Provide access to free and/or purchased downloads and other similar content;</li>
+                <li>Customize your browsing and shopping experience on the Sites;</li>
+                <li>Respond to your comments, questions, and requests, and to provide customer service;</li>
+                <li>Send you technical notices, updates, security alerts, information regarding changes to our
+policies, and support and administrative messages;</li>
+                <li>Prevent and address fraud, breach of policies or terms, and threats or harm;</li>
+                <li>Improve the Sites, Services, marketing efforts, products and services;</li>
+                <li>Evaluate applications for employment and other employment-related purposes;</li>
+                <li>Verify or authenticate your identity in relation to requests you make or communications
+you send;</li>
+                <li>Comply with legal obligations;</li>
+                <li>If you engage with us in a business-to-business capacity on behalf of your employer, in
+addition to the above, we also use your personal information to administer and manage
+our relationship with you and your employer (such as record keeping, payments,
+communicating with you, tracking outcomes, and verifying your eligibility and
+suitability); and</li>
+                <li>Fulfill any other purpose disclosed at the time you provide personal information.</li>
+              </ul>
+              <p>We will not use information we've collected from you for purposes that are materially different,
+unrelated, or incompatible with this Privacy Policy without providing you with prior notice.</p>
+              <p>Information that has been deidentified or aggregated is not subject to this Privacy Policy, and we
+and our Service Providers may use it without obligation to you except as prohibited by
+applicable law.</p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">4. We Collect Information About You From Various Sources.</h2>
+              <p>We collect and receive information about you from various sources, both indirectly and directly:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Information you provide directly to us. For example, we collect information when you
+register an account, make a purchase, sign up for our newsletter, access our content, or
+otherwise communicate or transact with us through the Sites and Services, or engage with
+us on behalf of your employer.</li>
+                <li>Information collected automatically from your devices. We and our Service Providers use
+tracking tools like browser cookies, beacons, and pixels to automatically collect
+information about you when you interact with our Sites and Services, including when you
+view or click on our digital ads and emails that we send to you.</li>
+                <li>Information collected on our behalf by Service Providers. We hire Service Providers to
+help us operate our business. Service Providers may host or maintain our Sites, provide
+cloud services, send emails, assist with customer support, provide market research or
+analytics, assist in order fulfillment, collect or publish customer reviews, or process
+payments. In performing such activities on our behalf, those Service Providers collect
+information about you.</li>
+                <li>Information provided by other parties. We work with other business partners, marketing
+partners, foundations, data brokers, social media platforms, exhibitors (such as movie
+theaters and streaming platforms), and other Third Party Services (as defined below) that
+may give us information about you. If you are a job applicant, we may get information
+about you from background check providers and job references (such as past employers).
+When we get information from other sources, we may combine that in a database with
+information we already have.</li>
               </ul>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4">3. Information Sharing</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                We do not sell, trade, or rent your personal information to third parties. We may share your information only:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-4">
-                <li>With your consent or at your direction</li>
-                <li>With service providers who assist in our operations</li>
-                <li>To comply with legal requirements or protect our rights</li>
-                <li>In connection with a business transfer or acquisition</li>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">5. We Share and Disclose Your Information.</h2>
+              <p>We share your personal information, including in some cases your sensitive personal
+information. Depending on the circumstances, we can share your personal information with the
+following parties:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>With our Service Providers who host or maintain our Sites, provide cloud services, send
+emails, assist with customer support, provide market research or analytics, assist in order
+fulfillment, collect or publish customer reviews, or process payments. We share
+information with those Service Providers in order for them to perform the activities listed
+above in Section 3 at our instruction or on our behalf (in which case they will handle
+personal information in the capacity of data processors or service providers under
+applicable data protection law); Please note that these Service Providers will directly
+collect, or receive from SIP, sensitive personal information as necessary for them to
+process payments, verify your username and password when logging into an SIP account,
+or conduct background checks on job applicants;</li>
+                <li>With our affiliates. We may share information with other brands within the SIP
+ownership structure.</li>
+                <li>With our business partners. For instance, we may share information with organizations
+with whom we jointly sell or co-brand merchandise, with whom we run a joint
+promotion, with whom we collaborate on ticketed events (such as virtual screening rooms
+or in-person screenings), distributors of our content (such as movie theaters and
+streaming platforms), or organizations who are the beneficiary of auction proceeds.</li>
+                <li>With marketing companies and social media platforms. We share information with
+companies that help us in our marketing efforts, including social media platforms, ad
+servers, advertising networks, and adtech platforms. This includes allowing select
+marketing companies to place their own cookies or other tracking tools on our Sites to
+track your activities across time and services, so that they may tailor and serve ads to you
+based on your activities ("Interest-based Advertising"). The information collected and
+stored by these marketing companies remains subject to their own policies and practices.</li>
+                <li>With law enforcement, government bodies, and other officials as required to comply with
+the law or other legal process, and where required, in response to lawful requests by
+public authorities, including to meet national security or law enforcement requirements;</li>
+                <li>With other parties as reasonably necessary to protect the rights, property, life, health,
+security and safety of us, the Sites, the Services or any third party, including to enforce
+our policies;</li>
+                <li>With other companies (including their and our advisors) in connection with, or during
+negotiations of, any proposed or actual merger, purchase, sale or any other type of
+acquisition or business combination of all or any portion of our assets, or transfer of all or
+a portion of our business to another company;</li>
+                <li>With other third parties we describe to you at the time you provide your personal
+information, for the limited purposes we disclose at such time; and</li>
+                <li>With other third parties at your express consent or at your direction.</li>
               </ul>
+              <p>Without limiting the foregoing, in our sole discretion, we may share aggregated information
+which does not identify you, or deidentified information about you, with third parties for any
+purpose.</p>
+              <p>Additionally, certain areas of the Sites and Services are designed to help you share information
+with the public and other users, such as public comment sections or other interactive features. If
+you choose to make information public through the Sites or Services, other users will have
+access to it. We cannot guarantee that the information you make public through the Sites or
+Services will remain protected in accordance with this Privacy Policy. Please think carefully
+before making information public. You are solely responsible for information you make public.</p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4">4. Data Security</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                We implement appropriate technical and organizational measures to protect your personal information against 
-                unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet 
-                is 100% secure, and we cannot guarantee absolute security.
-              </p>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">6. Third Party Services, Features, and Devices.</h2>
+              <p>Our Sites and Services contain content from and hyperlinks to websites, locations, platforms, and
+services operated and owned by third parties ("Third Party Services"), such as social network
+sites. In addition, the Sites and Services contain features that allow you to interact with, connect
+to, or access the Sites and Services through Third Party Services and third party devices ("Third
+Party Features"). For example, you interact with a Third Party Service when you "like" or
+"share" content over social media through our Services, or when you purchase merchandise from
+our Site. Remember that third parties may use their own tracking tools to independently collect
+information about you, and may solicit personal information from you. Also, if you use a Third
+Party Feature, both we and the applicable third party may have access to and use information
+associated with your use of the Third Party Feature.</p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4">5. Your Rights</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                You have the right to:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Access and receive a copy of your personal information</li>
-                <li>Correct or update your personal information</li>
-                <li>Request deletion of your personal information</li>
-                <li>Object to or restrict certain processing of your information</li>
-                <li>Withdraw consent where processing is based on consent</li>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">7. Your Choices.</h2>
+              
+              <h3 className="font-bold text-foreground">A. Our &quot;Do Not Track&quot; Policy</h3>
+              <p>Your browser settings may allow you to automatically transmit a "Do Not Track" signal to online
+services you visit. Note, however, there is currently no industry consensus as to what site and app
+operators should do with regard to these signals. Accordingly, we do not monitor or take action
+with respect to "Do Not Track" signals or other mechanisms. For more information on "Do Not
+Track," visit http://www.allaboutdnt.com.</p>
+              
+              <h3 className="font-bold text-foreground">B. Cookies, Analytics, and Advertising Tracking Tools.</h3>
+              <p>As disclosed in Section 2 and Section 4 above, we and our partners automatically collect
+information about your devices and online interactions using tracking technologies like cookies,
+pixels, and web beacons, across time and across different platforms.</p>
+              <p>We use Google Analytics to provide us with information about how you interact with the Sites
+and Services, so that we may customize and improve them for you. You may exercise choices
+regarding the use of cookies from Google Analytics by going to
+https://tools.google.com/dlpage/gaoptout or downloading the Google Analytics Opt-out Browser
+Add-on.</p>
+              <p>We and our partners engage in interest-based advertising by using tracking tools to understand
+your online interactions over time and across different platforms in order to serve advertisements
+that are more tailored to your interests. To opt-out of tracking for interest-based advertising
+purposes from participating companies, visit both the Digital Advertising Alliance WebChoices
+tool at www.aboutads.info/choices and the Network Advertising Initiative opt-out at
+www.networkadvertising.org/choices. Please be aware that even if you opt out of interest-based
+advertising, you will continue to receive online ads.</p>
+              <p>Options you select and choices you make are browser-, website-, and device-specific. If you
+clear your cookies, you will need to set your preferences again.</p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">8. Your Privacy Rights.</h2>
+              
+              <h3 className="font-bold text-foreground">8.1 United States Privacy Rights</h3>
+              <p>California's "Shine the Light" law permits consumers in California to request certain details
+about how their personal information is shared with third parties for those third parties' own
+direct marketing purposes, one time per year. SIP may share your personal information with third
+parties for their own direct marketing purposes. If you are a California resident and wish to
+obtain information about our compliance with this law, please e-mail us at
+info@setinstoneproductions.com. Requests should include "Shine the Light Request" in the
+email subject line or the first line of the letter, and should include your name, street address, city,
+state, and ZIP code. Also, any California residents under the age of eighteen (18) who have
+registered to use the Services and who have posted content or information on the Sites or
+Services can request that such information be removed by sending an e-mail to
+info@setinstoneproductions.com. Requests must state that the user personally posted such
+content or information, and detail where the content or information is posted. We will make
+reasonable good faith efforts to remove the post from prospective public view.</p>
+              <p>In addition, where provided for by applicable United States federal or state privacy laws, you
+may be entitled to exercise some or all of the rights described below with respect to your
+personal information:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Access / Right to Know: You have the right to confirm whether we process personal
+information about you and to request that we disclose certain information to you about
+our collection and use of your personal information over the past 12 months. You have
+the right to know: (i) the categories of personal information we collected about you
+(including sensitive personal information); (ii) the categories of sources for the personal
+information we collected about you; (iii) the categories of personal information we sold
+or disclosed, (iv) our business or commercial purpose for collecting and selling that
+personal information; (v) the categories of third parties with whom we shared your
+personal information; (v) a portable copy of the specific pieces of personal information
+we have collected about you; and (vi) information about the logic involved in any
+automated decision-making processes used by SIP (if any), as well as a description of the
+likely outcome of the process with respect to you (if applicable).</li>
+                <li>Right to Correct or Update: You have the right to request that we correct, update, or
+modify the personal information we maintain about you.</li>
+                <li>Right to Delete: You have the right to request that we delete any of your personal
+information that we maintain about you, subject to certain exceptions permitted by US
+privacy laws (such as if the information is necessary to complete a transaction or to retain
+pursuant to legal obligations).</li>
+                <li>Right to Opt-Out of Automated Decision-Making: You have the right to request to opt-
+out of any profiling or automated decision-making (however, only to the extent we
+engage in such automated processing activities).</li>
+                <li>Do Not Sell My Personal Information or Share My Personal Information for Behavioral
+Advertising: You can opt-out of the "sale" and "sharing" of your personal information by
+clicking this Do Not Sell or Share My Personal Information link, or by using an opt-out
+preference signal or universal opt-out mechanism on a supported browser. Your
+selections are specific to the device, website, and browser you are using, so you should
+make your selections on every device and browser you use to access this website. Your
+selections are also deleted whenever you clear your browser's cache.</li>
+                <li>Limit the Use of my Sensitive Personal Information: In relation to any sensitive personal
+information identified in Section 2 above, you can request that we limit our use and
+sharing of such information only to those uses which are necessary to carry out our
+relationship with you (such as providing our goods and services that you've requested,
+maintaining the quality of our services, or protecting our services against illegal activity),
+or as otherwise described in relevant privacy laws.</li>
               </ul>
+              <p>We may deny certain requests, or fulfill a request only in part, based on our legal rights and
+obligations.</p>
+              <p>As noted earlier, if you are an employee or contractor, your rights with respect to your personal
+information collected in the employment context will be described in a separate privacy notice
+that we provide to you where and when appropriate. We will not discriminate against you for
+exercising any of your U.S. privacy rights, such as by denying you goods or services, charging
+you a different price or rates for goods or services, or providing you a different level of quality of
+goods or service.</p>
+              
+              <h3 className="font-bold text-foreground">How to Exercise Your United States Privacy Rights</h3>
+              <p>Eligible individuals may request to exercise their privacy rights by submitting a request to us by
+either emailing us at info@setinstoneproductions.com or clicking the "Do Not Sell or Share My
+Personal Information" link at the bottom of this webpage.</p>
+              <p>We will take reasonable steps to verify your identity prior to responding to your requests. The
+verification steps may vary depending on the sensitivity of the personal information and whether
+you have an account with us.</p>
+              <p>You can designate an authorized agent to make a request on your behalf by following the same
+steps described above. But when submitting the request, please ensure the authorized agent
+identifies himself / herself / itself as an authorized agent.</p>
+              
+              <h3 className="font-bold text-foreground">Additional California Privacy Disclosures</h3>
+              <p>For purposes of California privacy law, please also note the following specific information about
+how we collect, use, and share your personal information:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Depending on our interactions with you, we may collect, use, and disclose for our
+business and commercial purposes the following categories of personal information set
+forth under California law: identifiers; payment and customer records information;
+characteristics of protected classifications under law (such as demographic information
+like age and gender); commercial information; professional or employment-related
+information; internet or other electronic network activity information; education
+information; sensitive personal information; and inferences. See Section 2 above for more
+details.</li>
+                <li>We collect and use the above categories of personal information for the business and
+commercial purposes described in Section 3 of this Privacy Policy.</li>
+                <li>We collect these categories of personal information directly from you, automatically from
+your devices, from our Service Providers that help us operate our business, and from
+business partners like marketing companies, foundations, data brokers, social media
+platforms, and exhibitors like movie theaters and streaming platforms. See Section 4 of
+this Privacy Policy for more details.</li>
+                <li>We may disclose each of these categories of personal information to our Service
+Providers who help us run our business (including Service Providers who directly collect
+or receive from SIP sensitive personal information to process your payments, verify your
+login credentials to SIP accounts, or conduct background checks on job applicants); our
+affiliates; exhibitors and distributors of our content, like movie theaters and streaming
+platforms; marketing and advertising companies, like ad servers and ad networks; social
+media platforms; business partners that co-sponsor promotions with us; for regulatory or
+law enforcement purposes; and in connection with mergers or corporate transactions. See
+Section 5 of this Privacy Policy for more details.</li>
+                <li>We may "sell" or "share" the following categories of personal information through our
+use of third-party advertising cookies: identifiers; commercial information; and internet
+or other electronic network activity. We may "sell" or "share" to marketing and
+advertising companies and the categories of third parties described in Section 5 of this
+Privacy Policy. We do not knowingly sell or share personal information of children under
+16 years of age.</li>
+                <li>We do not use or disclose sensitive personal information for purposes other than those
+specified under applicable California privacy regulations.</li>
+              </ul>
+              
+              <h3 className="font-bold text-foreground">8.2. European Privacy Rights.</h3>
+              <p>This Section of our Privacy Policy applies solely to visitors and users who are located in the
+European Economic Area ("EEA") or the United Kingdom ("UK"). For the purpose of EEA and
+UK data protection laws, Set in Stone Productions acts as controller in connection with the
+personal information described in this Privacy Policy.</p>
+              
+              <h4 className="font-semibold text-foreground">Legal Basis for Processing</h4>
+              <p>We process personal information on the following bases:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Consent – when you opt-in to receive cookies or otherwise provide consent for marketing
+and other data processing. You have the right to withdraw your consent, or to refrain from
+granting your consent. You are under no statutory or contractual requirement or
+obligation to provide personal information to us via our Sites.</li>
+                <li>Contract – when you make a purchase or participate in our events or programming, we
+need to process your personal information in order to perform that contract.</li>
+                <li>Legitimate interests – when processing your personal information is necessary in
+furtherance of our legitimate interests and isn't outweighed by risks of harm to your
+privacy rights. Our legitimate interests include, without limitation, those interests
+described in this Privacy Policy and our Terms of Use, such as the effective and lawful
+operation of our business, promoting our products and the Services, and operating,
+protecting, and customizing our Sites. We also process your personal information on the
+basis of our legitimate interests when responding to your requests, and when such
+processing is necessary for us to comply with any legal obligations. You have the right to
+object to processing of your personal information based on our legitimate interests.</li>
+                <li>Legal Claims – it is possible that we may need to process your personal information in
+order to defend or establish a legal claim (for example, claims relating to the sale of our
+goods and services under contract law).</li>
+              </ul>
+              
+              <h4 className="font-semibold text-foreground">EEA and UK Privacy Rights of Data Subjects</h4>
+              <p>Where provided under EEA and UK data protection law, you have the following rights regarding
+your personal information (each of which are subject to various exceptions and limitations):</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>The right to be informed: You have the right to be provided with clear, transparent and
+easily understandable information about how we use your personal information, and
+about your rights. This is why we are providing you with the information in this Privacy
+Policy.</li>
+                <li>The right of access: You have the right to request access to your personal information (if
+we are processing it).</li>
+                <li>The right to data portability: You have the right to obtain an easily portable copy of your
+personal information for your own purposes across different services and platforms.</li>
+                <li>The right to rectification: You have the right to request to have your personal information
+corrected if it is inaccurate or incomplete.</li>
+                <li>The right to erasure: You have the right to request the deletion or removal of your
+personal information where we have no compelling reason to keep using it. This is not a
+general right to erasure; there are exceptions.</li>
+                <li>The right to restrict processing: You have the right to block or suppress further use of
+your personal information. When processing is restricted, we can still store your
+information (for example, we keep lists of people who have asked for further use of their
+information to be blocked to make sure the restriction is respected in future).</li>
+                <li>The right to object: You have the right to object to certain types of processing, in
+particular processing based on our legitimate interests. You also can object at any time to
+your information being used for direct marketing purposes (including profiling related to
+such direct marketing).</li>
+                <li>The right to refuse or withdraw consent: You have the right to refuse to provide, or to
+withdraw, your consent to processing of your personal information at any time with effect
+for future processing, when the processing is based on your consent.</li>
+              </ul>
+              <p>If you wish to exercise any of these rights, or if you have any questions or concerns regarding
+our processing of your personal information, please contact us at
+info@setinstoneproductions.com.</p>
+              <p>If you are not satisfied with our response to your request or complaint, or if you believe our
+processing of your personal information does not comply with EEA or UK data protection law,
+you can make a complaint to a supervisory data protection authority. If you are a UK resident,
+you can make a complaint to the UK Information Commissioner's Office (ICO):
+https://ico.org.uk/concerns. Non-UK residents can find their local data protection authority here:
+https://edpb.europa.eu/about-e....</p>
+              
+              <h3 className="font-bold text-foreground">8.3. Other Jurisdiction Privacy Rights.</h3>
+              <p>Depending on where you reside or access the Sites or Services from, you may have additional
+privacy rights available to you, similar to the United States and EEA/UK rights described in
+Sections 8.1 and 8.2. If available pursuant to applicable data protection law, you may contact us
+at info@setinstoneproductions.com to make a request. We will respond in accordance with
+applicable data protection law.</p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4">6. Cookies and Tracking</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Our website may use cookies and similar tracking technologies to enhance your browsing experience. 
-                You can control cookies through your browser settings, but disabling cookies may limit your ability 
-                to use certain features of our website.
-              </p>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">9. Retention Period for Personal Information.</h2>
+              <p>We delete personal information within a reasonable period after we no longer need to use it for
+the purpose for which it was collected (or for any subsequent purpose that is compatible with the
+original purpose). We may archive personal information for a certain period prior to its final
+deletion, as part of our ordinary business continuity procedures. To determine the appropriate
+retention period with respect to any particular type of personal information, we rely on the
+following criteria: the necessity of the information to provide our services to our customers; the
+types and sensitivity of personal information being processed; regulatory requirements that we
+are subject to, including laws and regulations related to tax, employment, accounting, and
+securities; and whether a legal claim might be brought against us, for which the information
+would be relevant.</p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4">7. Children's Privacy</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Our services are not directed to individuals under the age of 18. We do not knowingly collect personal 
-                information from children under 18. If we become aware that we have collected such information, we will 
-                take steps to delete it.
-              </p>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">10. No Children Under 13.</h2>
+              <p>The Sites and Services are intended for a general audience and not directed to children under
+thirteen (13) years of age. SIP does not knowingly collect personal information from children
+under thirteen (13) years of age. If you are a parent or legal guardian and believe that we have
+inadvertently received personal information about a child under the age of 13, please email us at
+info@setinstoneproductions.com.</p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4">8. Changes to This Policy</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new 
-                Privacy Policy on this page and updating the "Last updated" date. Your continued use of our services after 
-                such changes constitutes acceptance of the updated policy.
-              </p>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">11. International Transfers; Processing in the United States.</h2>
+              <p>If you are accessing the Sites or Services from outside of the United States, please be aware that
+information collected through the Sites and Services will be transferred to, processed in, stored
+in, and used in the United States. Data protection laws in the United States may be different from
+those of your country of residence, and may not be as protective as those of your country of
+residence. When you provide personal information to us, you are consenting to the transfer of
+your personal information by both SIP and its Service Providers, including to the United States
+and other countries that do not have an adequacy decision from the European Commission (this
+means that the Commission has not determined that the laws of the United States and other
+countries provide legal protection equivalent to European Union data protection laws).</p>
+              <p>Our transfers of personal information outside of the EEA or UK are subject to contracts
+(including the European Commission's Standard Contractual Clauses) with our data processors,
+sub-processors, and Service Providers, which require such recipients to treat personal
+information in a manner that is consistent with our Privacy Policy and in compliance with
+applicable law.</p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold mb-4">9. Contact Us</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                If you have any questions about this Privacy Policy or our data practices, please contact us at:
-              </p>
-              <p className="text-muted-foreground mt-2">
-                Email: contact@setinstoneproductions.com
-              </p>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">12. Data Security.</h2>
+              <p>We take measures designed to help protect information about you from loss, theft, misuse and
+unauthorized access, disclosure, alteration and destruction. Nevertheless, transmission via the
+internet is never completely secure. We cannot guarantee the security of your information
+collected through our Sites or Services.</p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">13. Changes to this Privacy Policy.</h2>
+              <p>We reserve the right to revise and reissue this Privacy Policy at any time. Any changes will be
+effective immediately upon posting of the revised Privacy Policy. Your continued use of our
+Service indicates your acknowledgment of the Privacy Policy then posted. If the changes are
+material, we may provide you additional notice.</p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">14. Contact Us.</h2>
+              <p>If you have any questions or comments about this Privacy Policy, or would like to make a
+complaint about how we process your personal information, please e-mail us at
+contact@setinstoneproductions.com. We will seek to address any questions, comments, or
+complaints as soon as possible.</p>
             </section>
           </div>
         </div>

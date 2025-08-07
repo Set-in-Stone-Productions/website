@@ -22,7 +22,7 @@ export function HeroSection() {
           </span>
         </h1>
         <p className="text-2xl md:text-3xl mb-8 text-primary font-light tracking-[0.2em] uppercase animate-fade-up animation-delay-200 drop-shadow-lg">
-          Where Vision Meets Execution
+          Where Visions Sharpens Creation
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up animation-delay-600">

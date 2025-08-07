@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Autoplay from "embla-carousel-autoplay";
+import Fade from "embla-carousel-fade";
 import {
   Carousel,
   CarouselContent,
@@ -6,9 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
-
 // Balls of Steel images
 import ballsOfSteel1 from "@/assets/Balls of Steel/balls-of-steel-1.png";
 import ballsOfSteel2 from "@/assets/Balls of Steel/balls-of-steel-2.png";
@@ -36,6 +35,15 @@ import routine2 from "@/assets/Routine/routine-2.png";
 import routine3 from "@/assets/Routine/routine-3.png";
 import routine4 from "@/assets/Routine/routine-4.png";
 
+// Craig Likes Badmitten images
+import craigLikesBadmitten1 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-1.png";
+import craigLikesBadmitten2 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-2.png";
+import craigLikesBadmitten3 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-3.png";
+import craigLikesBadmitten4 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-4.png";
+import craigLikesBadmitten5 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-5.png";
+import craigLikesBadmitten6 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-6.png";
+import craigLikesBadmitten7 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-7.png";
+
 export function PortfolioSection() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
@@ -53,7 +61,7 @@ export function PortfolioSection() {
       date: "2025",
       category: "narrative",
       credits: "Director: Jake Bernstein",
-      description: "A psychological thriller exploring the dark side of daily habits and obsessive behavior.",
+      description: "A young man slogs through his workweek amid a mental health crisis.",
       images: [routine1, routine2, routine3, routine4]
     },
     {
@@ -62,7 +70,7 @@ export function PortfolioSection() {
       date: "2024",
       category: "documentary",
       credits: "Director: Jake Bernstein",
-      description: "An inspiring documentary following competitive athletes pushing their physical limits.",
+      description: "A short documentary following an underwater welder and what comes with the most dangerous job in the world.",
       images: [ballsOfSteel1, ballsOfSteel2, ballsOfSteel3, ballsOfSteel4, ballsOfSteel5, ballsOfSteel6, ballsOfSteel7, ballsOfSteel8, ballsOfSteel9]
     },
     {
@@ -72,7 +80,7 @@ export function PortfolioSection() {
       category: "narrative",
       credits: "Director: Alden Bernstein",
       description: "A heartwarming comedy about finding passion in unexpected places.",
-      images: [portfolio5, portfolio6]
+      images: [craigLikesBadmitten1, craigLikesBadmitten3, craigLikesBadmitten4, craigLikesBadmitten5, craigLikesBadmitten6, craigLikesBadmitten2, craigLikesBadmitten7]
     },
     {
       id: 4,
@@ -127,7 +135,24 @@ export function PortfolioSection() {
             >
               {/* Image Carousel Section */}
               <div className="lg:w-1/2">
-                <Carousel className="w-full h-full">
+                <Carousel 
+                  className="w-full h-full carousel-fade"
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  plugins={[
+                    Fade({
+                      active: true,
+                      breakpoints: {}
+                    }),
+                    Autoplay({
+                      delay: 6000,
+                      stopOnInteraction: false,
+                      stopOnMouseEnter: true,
+                    }),
+                  ]}
+                >
                   <CarouselContent>
                     {project.images.map((image, imgIndex) => (
                       <CarouselItem key={imgIndex}>
@@ -164,9 +189,20 @@ export function PortfolioSection() {
                   
                   <p className="text-muted-foreground leading-relaxed">{project.description}</p>
                   
-                  <button className="mt-6 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 font-medium inline-block w-fit">
-                    View Full Project
-                  </button>
+                  {project.title === "ROUTINE" ? null : (
+                    <a 
+                      href={
+                        project.title === "Balls of Steel" ? "https://www.youtube.com/watch?v=5KQyB97yuno" :
+                        project.title === "Ex Oblivione" ? "https://www.youtube.com/watch?v=fZiMCkPndTk" :
+                        "#"
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 font-medium inline-block w-fit"
+                    >
+                      View Full Project
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

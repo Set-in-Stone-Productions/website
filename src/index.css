@@ -219,6 +219,31 @@ All colors MUST be HSL.
   .film-burn:hover::before {
     opacity: 1;
   }
+
+  /* Carousel fade transitions */
+  .carousel-fade .embla__viewport {
+    overflow: hidden;
+  }
+
+  .carousel-fade .embla__container {
+    display: flex;
+  }
+
+  .carousel-fade .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    opacity: 0;
+    transition: opacity 2.5s ease-in-out;
+  }
+
+  .carousel-fade .embla__slide.is-selected {
+    opacity: 1;
+  }
+
+  /* Faster transition for manual navigation */
+  .carousel-fade.is-dragging .embla__slide {
+    transition: opacity 0.3s ease-in-out;
+  }
 }
 
 /* Animations keyframes */
