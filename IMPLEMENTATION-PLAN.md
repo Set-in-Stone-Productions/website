@@ -33,41 +33,19 @@ Later:
 
 Jake's Suggestions:
 
-Terms of Serivce:
-1. Change Text
-   - See Email for file.
-  
-Privacy Policy:
-1. Change Text
-   - See Email for file.
-  
 Submission Agreement:
-1. Change Text
-   - See Email for file
+1. Fix Errors, remove "Page 2" text that is scattered through out the page.
 
 Home:
-1. Fix Motto on Splash Page to match footer, should read: Where Visions Sharpens Creation
-2. Change Landing Image /X/
+1. Change Landing Image /X/
 
-About:
-1. Change Zach Bio text:
-- Don't know yet /X/
-
-Portfolio  
-1. Add images to projects
-2. Change Project descriptions:
-   - Routine: A young man slogs through his workweek amid a mental health crisis.
-   - Balls of Steel: A short documentary following an underwater welder and what comes with the most dangerous job in the world.
-  
-3. Add Links to "View Full Project" Button:
-- Balls of Steel: https://www.youtube.com/watch?v=5KQyB97yuno 
-- Ex Oblivione: https://www.youtube.com/watch?v=fZiMCkPndTk
-
-4. Hide "View Full Project" Button for Routine for now. 
-
-Submission
+Submission:
 1. Add functionality to submission form
 2. Make it forward to submission@setinstoneproductions.com
+
+Contact:
+1. Add functionality to contact form.
+2. Make it forward to contact@setinstoneproductions.com
 
 Footer:
 1. Link Socials /X/
