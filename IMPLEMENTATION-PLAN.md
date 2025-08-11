@@ -40,8 +40,9 @@ Home:
 1. Change Landing Image /X/
 
 Submission:
-1. Add functionality to submission form
+1. Add functionality to submission form. Questions and attachments should be sent to the designated email. 
 2. Make it forward to submission@setinstoneproductions.com
+3. Add 3 Megebyte limit to attachment feature. 
 
 Contact:
 1. Add functionality to contact form.
