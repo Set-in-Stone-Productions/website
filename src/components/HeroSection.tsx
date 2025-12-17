@@ -16,11 +16,13 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6 tracking-wider animate-fade-up">
-          <span className="bg-gradient-to-b from-foreground via-foreground to-primary/80 bg-clip-text text-transparent drop-shadow-2xl">
-            Set in Stone Productions
-          </span>
-        </h1>
+        <div className="mb-6 animate-fade-up">
+          <img
+            src="/SIT Logo Black copy.png"
+            alt="Set in Stone Productions"
+            className="h-40 md:h-56 w-auto mx-auto drop-shadow-2xl"
+          />
+        </div>
         <p className="text-2xl md:text-3xl mb-8 text-primary font-light tracking-[0.2em] uppercase animate-fade-up animation-delay-200 drop-shadow-lg">
           Where Visions Sharpens Creation
         </p>

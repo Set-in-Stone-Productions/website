@@ -18,14 +18,15 @@ export function Navigation() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="text-xl font-poppins font-bold text-foreground hover:text-primary transition-all duration-300 tracking-wide relative group"
+          <Link
+            to="/"
+            className="transition-all duration-300 hover:opacity-80"
           >
-            <span className="relative">
-              Set in Stone Productions
-              <span className="absolute left-0 right-0 bottom-0 h-[1px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-            </span>
+            <img
+              src="/SIT Logo Black copy.png"
+              alt="Set in Stone Productions"
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

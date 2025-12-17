@@ -194,6 +194,7 @@ export function PortfolioSection() {
                       href={
                         project.title === "Balls of Steel" ? "https://www.youtube.com/watch?v=5KQyB97yuno" :
                         project.title === "Ex Oblivione" ? "https://www.youtube.com/watch?v=fZiMCkPndTk" :
+                        project.title === "CRAIG LIKES BADMITTEN" ? "https://www.youtube.com/watch?v=JYK-08vnL8Y" :
                         "#"
                       }
                       target="_blank"
