@@ -11,6 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "googleapis": "^140.0.0",
     "@fontsource/open-sans": "^5.2.6",
     "@fontsource/poppins": "^5.2.6",
     "@hookform/resolvers": "^3.9.0",

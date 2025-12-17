@@ -13,6 +13,8 @@ import { useToast } from "@/components/ui/use-toast";
 const SubmissionForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [lastSubmissionTime, setLastSubmissionTime] = useState<number>(0);
+  const [honeypot, setHoneypot] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,6 +29,7 @@ const SubmissionForm = () => {
     signature: "",
     termsAccepted: false
   });
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -43,7 +46,7 @@ const SubmissionForm = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // Validation
@@ -65,48 +68,41 @@ const SubmissionForm = () => {
       return;
     }
 
+    // Check cooldown period (30 seconds)
+    const now = Date.now();
+    const timeSinceLastSubmission = now - lastSubmissionTime;
+    if (timeSinceLastSubmission < 30000) {
+      const remainingTime = Math.ceil((30000 - timeSinceLastSubmission) / 1000);
+      toast({
+        title: "Please wait",
+        description: `You can submit again in ${remainingTime} seconds.`,
+        variant: "destructive"
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // Create email content
-      const emailContent = `
-New Project Submission from Set in Stone Productions Website
-
-Contact Information:
-Name: ${formData.name}
-Email: ${formData.email}
-
-Project Details:
-Project Name: ${formData.projectName}
-Logline: ${formData.logline}
-Synopsis: ${formData.synopsis}
-Project Length: ${formData.length || "Not specified"}
-Genre: ${formData.genre || "Not specified"}
-Estimated Budget: ${formData.budget || "Not specified"}
-Script Status: ${formData.scriptStatus || "Not specified"}
-
-Additional Materials:
-${formData.materials || "None provided"}
-
-Electronic Signature: ${formData.signature}
-Terms Accepted: Yes
-Submission Date: ${new Date().toLocaleString()}
-      `;
-
-      // Since we can't directly send emails from the frontend, we'll use mailto as a fallback
-      // In production, this should be replaced with a proper backend API endpoint
-      const mailtoLink = `mailto:submission@setinstoneproductions.com?subject=New Project Submission: ${encodeURIComponent(formData.projectName)}&body=${encodeURIComponent(emailContent)}`;
-      
-      // Open mail client
-      window.location.href = mailtoLink;
-
-      toast({
-        title: "Submission Prepared",
-        description: "Your email client will open with your submission details. Please send the email to complete your submission.",
+      const response = await fetch('/api/submit', {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          honeypot
+        })
       });
 
-      // Reset form after a delay
-      setTimeout(() => {
+      if (response.ok) {
+        // Set last submission time
+        setLastSubmissionTime(Date.now());
+        
+        toast({
+          title: "Success!",
+          description: "Your submission has been sent successfully.",
+        });
+        
+        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -121,12 +117,20 @@ Submission Date: ${new Date().toLocaleString()}
           signature: "",
           termsAccepted: false
         });
-      }, 2000);
-
+        setHoneypot("");
+        
+        // Redirect after a short delay
+        setTimeout(() => {
+          window.location.href = "/submissions";
+        }, 2000);
+      } else {
+        const errorText = await response.text();
+        throw new Error(errorText || "Something went wrong");
+      }
     } catch (error) {
       toast({
-        title: "Submission Error",
-        description: "There was an error preparing your submission. Please try again.",
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to submit form. Please try again.",
         variant: "destructive"
       });
     } finally {
@@ -151,12 +155,16 @@ Submission Date: ${new Date().toLocaleString()}
               <CardTitle className="text-2xl font-poppins text-foreground">Project Submission Form</CardTitle>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6" onSubmit={handleSubmit}>
+              <form
+                className="space-y-6"
+                onSubmit={handleSubmit}
+              >
                 {/* Name */}
                 <div className="space-y-2">
                   <Label htmlFor="name">Name *</Label>
                   <Input 
-                    id="name" 
+                    id="name"
+                    name="name"
                     placeholder="Your full name"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
                     value={formData.name}
@@ -169,7 +177,8 @@ Submission Date: ${new Date().toLocaleString()}
                 <div className="space-y-2">
                   <Label htmlFor="email">Email *</Label>
                   <Input 
-                    id="email" 
+                    id="email"
+                    name="email"
                     type="email"
                     placeholder="your.email@example.com"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
@@ -183,7 +192,8 @@ Submission Date: ${new Date().toLocaleString()}
                 <div className="space-y-2">
                   <Label htmlFor="project-name">Project Name *</Label>
                   <Input 
-                    id="projectName" 
+                    id="projectName"
+                    name="projectName"
                     placeholder="Title of your project"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
                     value={formData.projectName}
@@ -196,7 +206,8 @@ Submission Date: ${new Date().toLocaleString()}
                 <div className="space-y-2">
                   <Label htmlFor="logline">Logline *</Label>
                   <Textarea 
-                    id="logline" 
+                    id="logline"
+                    name="logline" 
                     placeholder="A one-sentence summary of your project"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0 min-h-[80px]"
                     value={formData.logline}
@@ -209,7 +220,8 @@ Submission Date: ${new Date().toLocaleString()}
                 <div className="space-y-2">
                   <Label htmlFor="synopsis">Short Synopsis *</Label>
                   <Textarea 
-                    id="synopsis" 
+                    id="synopsis"
+                    name="synopsis" 
                     placeholder="Brief description of your project (2-3 paragraphs)"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0 min-h-[120px]"
                     value={formData.synopsis}
@@ -223,6 +235,7 @@ Submission Date: ${new Date().toLocaleString()}
                   <Label htmlFor="length">Project Length</Label>
                   <Input
                     id="length"
+                    name="length"
                     placeholder="e.g., Short Film, Feature Film, Series, etc."
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
                     value={formData.length}
@@ -235,6 +248,7 @@ Submission Date: ${new Date().toLocaleString()}
                   <Label htmlFor="genre">Project Genre</Label>
                   <Input
                     id="genre"
+                    name="genre"
                     placeholder="e.g., Drama, Comedy, Horror, etc."
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
                     value={formData.genre}
@@ -247,6 +261,7 @@ Submission Date: ${new Date().toLocaleString()}
                   <Label htmlFor="budget">Estimated Budget</Label>
                   <Input
                     id="budget"
+                    name="budget"
                     placeholder="e.g., Under $10,000, $10,000-$25,000, etc."
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
                     value={formData.budget}
@@ -259,6 +274,7 @@ Submission Date: ${new Date().toLocaleString()}
                   <Label htmlFor="script-status">Script Status</Label>
                   <Input
                     id="scriptStatus"
+                    name="scriptStatus"
                     placeholder="e.g., Concept Stage, First Draft, Final Draft, etc."
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
                     value={formData.scriptStatus}
@@ -269,28 +285,26 @@ Submission Date: ${new Date().toLocaleString()}
                 {/* Additional Materials */}
                 <div className="space-y-2">
                   <Label htmlFor="materials">Additional Materials</Label>
-                  <Textarea 
-                    id="materials" 
-                    placeholder="Please list any additional materials you have (Treatment, Pitch Deck, Moodboard, Link to Playlist, etc.)"
+                  <Textarea
+                    id="materials"
+                    name="materials"
+                    placeholder="Please share links to any additional materials (Google Drive, Dropbox, etc.) such as Treatment, Pitch Deck, Moodboard, Script, etc."
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0 min-h-[100px]"
                     value={formData.materials}
                     onChange={handleInputChange}
                   />
                 </div>
 
-                {/* File Upload - Note: Backend implementation needed */}
-                <div className="space-y-2">
-                  <Label htmlFor="file-upload">Attachments</Label>
-                  <Input
-                    id="file-upload"
-                    type="file"
-                    multiple
-                    className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
-                  />
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Upload relevant files (scripts, treatments, mood boards, etc.)
-                  </p>
-                </div>
+                {/* Honeypot field - hidden from users, bots fill it */}
+                <input
+                  type="text"
+                  name="honeypot"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  style={{ position: 'absolute', left: '-9999px' }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
 
                 {/* Legal Agreements */}
                 <div className="space-y-4">
@@ -320,7 +334,8 @@ Submission Date: ${new Date().toLocaleString()}
                 <div className="space-y-2">
                   <Label htmlFor="signature">Electronic Signature *</Label>
                   <Input 
-                    id="signature" 
+                    id="signature"
+                    name="signature" 
                     placeholder="Type your full name as your electronic signature"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
                     value={formData.signature}
@@ -358,7 +373,7 @@ Submission Date: ${new Date().toLocaleString()}
                 {/* Submit Button */}
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 shadow-md transition-all duration-200 ease-out py-3"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 shadow-md transition-all duration-200 ease-out py-3 disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Submit Project"}
