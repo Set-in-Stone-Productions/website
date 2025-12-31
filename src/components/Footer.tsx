@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Set in Stone Productions</h3>
             <p className="text-muted-foreground mb-4">
-              Where Visions Sharpens Creation
+              Where Vision Sharpens Creation
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/set_in_stone_productions/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
@@ -36,7 +36,7 @@ export function Footer() {
               <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
               <li><a href="#portfolio" className="text-muted-foreground hover:text-primary transition-colors">Portfolio</a></li>
               <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="mailto:contact@jbernsteinmedia.com" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
 

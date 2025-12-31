@@ -9,7 +9,7 @@ import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Services from "./pages/Services";
 import Submissions from "./pages/Submissions";
-import Contact from "./pages/Contact";
+
 import SubmissionForm from "./pages/SubmissionForm";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -32,7 +32,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/submissions" element={<Submissions />} />
             <Route path="/submission-form" element={<SubmissionForm />} />
-            <Route path="/contact" element={<Contact />} />
+
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/submission-agreement" element={<SubmissionAgreement />} />

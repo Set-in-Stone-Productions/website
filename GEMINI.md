@@ -33,6 +33,7 @@ no need to build it will build online, so never build here locally
 1. Push current changes and all untracked files to `main` branch
 2. Then push the same changes to `DEV` branch
 3. Respond: "I will save this version to DEV as well for now!"
+4. Makesure you pushed to MAIN branch!
 
 #### "SAVE AS A DRAFT"
 When the user says **"SAVE AS A DRAFT"**:

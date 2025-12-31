@@ -61,7 +61,13 @@ export function PortfolioSection() {
       date: "2025",
       category: "narrative",
       credits: "Director: Jake Bernstein",
-      description: "A young man slogs through his workweek amid a mental health crisis.",
+      description: (
+        <>
+          A young man slogs through his workweek amid a mental health crisis.
+          <br /><br />
+          <span className="text-primary font-medium">Nominated for best short film at Glendale International Film Festival</span>
+        </>
+      ),
       images: [routine1, routine2, routine3, routine4]
     },
     {
@@ -93,8 +99,8 @@ export function PortfolioSection() {
     }
   ];
 
-  const filteredProjects = selectedCategory === "all" 
-    ? projects 
+  const filteredProjects = selectedCategory === "all"
+    ? projects
     : projects.filter(project => project.category === selectedCategory);
 
   return (
@@ -112,11 +118,10 @@ export function PortfolioSection() {
           {categories.map(category => (
             <button
               key={category.id}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                selectedCategory === category.id
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${selectedCategory === category.id
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary-foreground/10 hover:bg-secondary-foreground/20"
-              }`}
+                }`}
               onClick={() => setSelectedCategory(category.id)}
             >
               {category.label}
@@ -127,15 +132,14 @@ export function PortfolioSection() {
         {/* Projects List - Vertical Layout */}
         <div className="max-w-7xl mx-auto space-y-24">
           {filteredProjects.map((project, index) => (
-            <div 
-              key={project.id} 
-              className={`bg-card/60 backdrop-blur-md rounded-lg overflow-hidden shadow-2xl border border-border hover:border-primary/30 animate-fade-up film-burn transition-all duration-300 ${
-                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } flex flex-col lg:flex`}
+            <div
+              key={project.id}
+              className={`bg-card/60 backdrop-blur-md rounded-lg overflow-hidden shadow-2xl border border-border hover:border-primary/30 animate-fade-up film-burn transition-all duration-300 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                } flex flex-col lg:flex`}
             >
               {/* Image Carousel Section */}
               <div className="lg:w-1/2">
-                <Carousel 
+                <Carousel
                   className="w-full h-full carousel-fade"
                   opts={{
                     align: "start",
@@ -157,9 +161,9 @@ export function PortfolioSection() {
                     {project.images.map((image, imgIndex) => (
                       <CarouselItem key={imgIndex}>
                         <div className="relative aspect-video h-full">
-                          <img 
-                            src={image} 
-                            alt={`${project.title} - Image ${imgIndex + 1}`} 
+                          <img
+                            src={image}
+                            alt={`${project.title} - Image ${imgIndex + 1}`}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -182,20 +186,20 @@ export function PortfolioSection() {
                     <span className="text-primary text-lg font-medium">{project.date}</span>
                     <span className="text-muted-foreground capitalize text-sm px-3 py-1 bg-muted/20 rounded-full">{project.category}</span>
                   </div>
-                  
+
                   <h3 className="text-3xl lg:text-4xl font-bold text-foreground">{project.title}</h3>
-                  
+
                   <p className="text-muted-foreground text-lg">{project.credits}</p>
-                  
+
                   <p className="text-muted-foreground leading-relaxed">{project.description}</p>
-                  
+
                   {project.title === "ROUTINE" ? null : (
-                    <a 
+                    <a
                       href={
                         project.title === "Balls of Steel" ? "https://www.youtube.com/watch?v=5KQyB97yuno" :
-                        project.title === "Ex Oblivione" ? "https://www.youtube.com/watch?v=fZiMCkPndTk" :
-                        project.title === "CRAIG LIKES BADMITTEN" ? "https://www.youtube.com/watch?v=JYK-08vnL8Y" :
-                        "#"
+                          project.title === "Ex Oblivione" ? "https://www.youtube.com/watch?v=fZiMCkPndTk" :
+                            project.title === "CRAIG LIKES BADMITTEN" ? "https://www.youtube.com/watch?v=JYK-08vnL8Y" :
+                              "#"
                       }
                       target="_blank"
                       rel="noopener noreferrer"
