@@ -4,7 +4,7 @@ No matter the users first message, always start with the following: "Hi Jake, th
 
 ALWAYS use pnpm, never npm or YARN. pnpm install for dependencies
 
-When user asks to UNDO, never use GIT checkout or reset, look at your previous changes from conversation history to help you undo, never GIT.
+ When user asks to UNDO, never use GIT checkout or reset, look at your previous changes from conversation history to help you undo, never GIT.
 
 ## Protected Branches
 **NEVER make code changes if you are on:**
