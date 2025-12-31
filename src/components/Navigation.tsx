@@ -67,7 +67,7 @@ export function Navigation() {
     { href: "/about", label: "About" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/services", label: "Services" },
-    { href: "mailto:contact@setinstoneproductions.com", label: "Contact", external: true },
+    { href: "mailto:contact@jbernsteinmedia.com", label: "Contact", external: true },
   ];
 
   return (
@@ -77,11 +77,9 @@ export function Navigation() {
           {/* Left section - Logo */}
           <div className="flex-1 flex items-center">
             <div
-              className={`h-24 flex items-center overflow-hidden ${
-                isHomePage || shouldAnimate || justNavigatedToHome ? 'transition-all duration-500 ease-in-out' : ''
-              } ${
-                showNavElements ? 'max-w-[200px] opacity-100' : 'max-w-0 opacity-0'
-              }`}
+              className={`h-24 flex items-center overflow-hidden ${isHomePage || shouldAnimate || justNavigatedToHome ? 'transition-all duration-500 ease-in-out' : ''
+                } ${showNavElements ? 'max-w-[200px] opacity-100' : 'max-w-0 opacity-0'
+                }`}
             >
               <Link
                 to="/"
@@ -91,7 +89,7 @@ export function Navigation() {
                 <img
                   src="/SITtopleftlogo.png"
                   alt="Set in Stone Productions"
-                  className="h-24 w-auto"
+                  className="h-16 md:h-24 w-auto"
                 />
               </Link>
             </div>
@@ -129,11 +127,9 @@ export function Navigation() {
           {/* Right section - Submit button & Mobile menu */}
           <div className="flex-1 flex items-center justify-end">
             <div
-              className={`hidden md:block overflow-hidden ${
-                isHomePage || shouldAnimate || justNavigatedToHome ? 'transition-all duration-500 ease-in-out' : ''
-              } ${
-                showNavElements ? 'max-w-[200px] opacity-100' : 'max-w-0 opacity-0'
-              }`}
+              className={`hidden md:block overflow-hidden ${isHomePage || shouldAnimate || justNavigatedToHome ? 'transition-all duration-500 ease-in-out' : ''
+                } ${showNavElements ? 'max-w-[200px] opacity-100' : 'max-w-0 opacity-0'
+                }`}
             >
               <Link
                 to="/submission-form"
@@ -179,12 +175,12 @@ export function Navigation() {
                 )
               ))}
               <div className="px-3 py-2">
-              <Link
-                to="/submission-form"
-                className="block w-full bg-primary text-primary-foreground hover:bg-primary/90 px-3 py-2 rounded-lg transition-all text-center font-playfair font-medium border border-primary/30"
-              >
-                Submit a Project
-              </Link>
+                <Link
+                  to="/submission-form"
+                  className="block w-full bg-primary text-primary-foreground hover:bg-primary/90 px-3 py-2 rounded-lg transition-all text-center font-playfair font-medium border border-primary/30"
+                >
+                  Submit a Project
+                </Link>
               </div>
             </div>
           </div>

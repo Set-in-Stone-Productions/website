@@ -1,13 +1,15 @@
-import { 
+import {
   Film,
-  Video, 
-  LightbulbIcon, 
-  Edit, 
-  FastForward, 
-  Radio, 
+  Video,
+  LightbulbIcon,
+  Edit,
+  FastForward,
+  Radio,
   Trophy,
   BarChart4
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function ServicesSection() {
   const services = [
@@ -68,8 +70,8 @@ export function ServicesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <div 
-              key={service.title} 
+            <div
+              key={service.title}
               className="p-8 rounded-lg bg-card/60 backdrop-blur-md hover:bg-card/80 border border-border hover:border-primary/30 shadow-2xl hover:shadow-primary/10 transition-all duration-200 animate-fade-up relative overflow-hidden group film-burn"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-200"></div>
@@ -93,7 +95,26 @@ export function ServicesSection() {
             </div>
           ))}
         </div>
-        
+
+        {/* Action Buttons */}
+        <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:shadow-xl hover:shadow-primary/30 shadow-lg transition-all duration-300 ease-out px-8 py-6 text-base font-medium tracking-wide"
+            asChild
+          >
+            <Link to="/submission-form">Submit Your Project</Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-primary/50 text-foreground hover:text-primary hover:border-primary hover:bg-primary/5 transition-all duration-300 ease-out px-8 py-6 text-base font-medium"
+            asChild
+          >
+            <Link to="/portfolio">View Our Work</Link>
+          </Button>
+        </div>
+
         {/* Awards & Recognition - Hidden for now */}
         <div className="hidden mt-24 text-center">
           <div className="inline-flex items-center mb-8">
@@ -102,8 +123,8 @@ export function ServicesSection() {
           </div>
           <div className="flex flex-wrap justify-center gap-6">
             {["Sundance Official Selection", "SXSW Audience Award", "Cannes Film Festival", "Emmy Nominated"].map((award) => (
-              <div 
-                key={award} 
+              <div
+                key={award}
                 className="py-3 px-6 rounded-full bg-secondary text-secondary-foreground border border-border"
               >
                 {award}

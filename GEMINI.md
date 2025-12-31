@@ -29,10 +29,10 @@ pnpm dev
 
 #### "UPLOAD NOW TO LIVE SITE"
 When the user says **"UPLOAD NOW"**:
-1. Run `pnpm build` to create the dist folder
-2. Push current changes and all untracked files to `main` branch
-3. Then push the same changes to `DEV` branch
-4. Respond: "I will save this version to DEV as well for now!"
+no need to build it will build online, so never build here locally
+1. Push current changes and all untracked files to `main` branch
+2. Then push the same changes to `DEV` branch
+3. Respond: "I will save this version to DEV as well for now!"
 
 #### "SAVE AS A DRAFT"
 When the user says **"SAVE AS A DRAFT"**:

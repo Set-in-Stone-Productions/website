@@ -37,26 +37,10 @@ export function HeroSection() {
           />
         </div>
         <p className={`text-lg md:text-xl mb-5 text-primary font-light tracking-[0.2em] uppercase drop-shadow-lg ${animationsReady ? "animate-fade-up animation-delay-200" : "opacity-0"}`}>
-          Where Visions Sharpens Creation
+          Where Vision Sharpens Creation
         </p>
 
-        <div className={`flex flex-col sm:flex-row gap-3 justify-center items-center ${animationsReady ? "animate-fade-up animation-delay-600" : "opacity-0"}`}>
-          <Button
-            size="default"
-            className="bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:shadow-xl hover:shadow-primary/30 shadow-lg transition-all duration-300 ease-out px-6 py-2 text-sm font-medium tracking-wide"
-            asChild
-          >
-            <Link to="/submission-form">Submit Your Project</Link>
-          </Button>
-          <Button
-            size="default"
-            variant="outline"
-            className="border-[#D4A574]/50 text-foreground hover:text-foreground/100 hover:border-foreground/80 hover:shadow-lg hover:shadow-white/10 hover:bg-white/5 shadow-md backdrop-blur-sm bg-[#D4A574]/10 transition-all duration-300 ease-out px-6 py-2 text-sm font-medium"
-            asChild
-          >
-            <Link to="/portfolio">View Our Work</Link>
-          </Button>
-        </div>
+
       </div>
 
     </section>

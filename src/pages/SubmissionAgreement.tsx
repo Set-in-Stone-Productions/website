@@ -16,7 +16,7 @@ const SubmissionAgreement = () => {
             <div className="text-center font-bold text-foreground">SUBMISSION AGREEMENT</div>
             
             <p>This SUBMISSION AGREEMENT ("Submission Agreement") shall govern the submission of
-scripts, (collectively, the "Material") submitted by you ("Writer") to LLCSet in Stone
+scripts, (collectively, the "Material") submitted by you ("Writer") to Set in Stone
 Productions ("Company") and ("Producer"). For good and valuable consideration, the
 receipt and sufficiency of which Writer acknowledges, by opting-in to the Program, Writer hereby
 irrevocably agrees as follows: Representation and Warranty: Writer represents and warrants (i) that Writer meets the submission

@@ -48,7 +48,7 @@ const SubmissionForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     // Validation
     if (!formData.name || !formData.email || !formData.projectName || !formData.logline || !formData.synopsis || !formData.signature) {
       toast({
@@ -96,12 +96,12 @@ const SubmissionForm = () => {
       if (response.ok) {
         // Set last submission time
         setLastSubmissionTime(Date.now());
-        
+
         toast({
           title: "Success!",
           description: "Your submission has been sent successfully.",
         });
-        
+
         // Reset form
         setFormData({
           name: "",
@@ -118,7 +118,7 @@ const SubmissionForm = () => {
           termsAccepted: false
         });
         setHoneypot("");
-        
+
         // Redirect after a short delay
         setTimeout(() => {
           window.location.href = "/submissions";
@@ -140,7 +140,7 @@ const SubmissionForm = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      
+
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
@@ -162,7 +162,7 @@ const SubmissionForm = () => {
                 {/* Name */}
                 <div className="space-y-2">
                   <Label htmlFor="name">Name *</Label>
-                  <Input 
+                  <Input
                     id="name"
                     name="name"
                     placeholder="Your full name"
@@ -176,7 +176,7 @@ const SubmissionForm = () => {
                 {/* Email */}
                 <div className="space-y-2">
                   <Label htmlFor="email">Email *</Label>
-                  <Input 
+                  <Input
                     id="email"
                     name="email"
                     type="email"
@@ -191,7 +191,7 @@ const SubmissionForm = () => {
                 {/* Project Name */}
                 <div className="space-y-2">
                   <Label htmlFor="project-name">Project Name *</Label>
-                  <Input 
+                  <Input
                     id="projectName"
                     name="projectName"
                     placeholder="Title of your project"
@@ -205,9 +205,9 @@ const SubmissionForm = () => {
                 {/* Logline */}
                 <div className="space-y-2">
                   <Label htmlFor="logline">Logline *</Label>
-                  <Textarea 
+                  <Textarea
                     id="logline"
-                    name="logline" 
+                    name="logline"
                     placeholder="A one-sentence summary of your project"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0 min-h-[80px]"
                     value={formData.logline}
@@ -219,9 +219,9 @@ const SubmissionForm = () => {
                 {/* Short Synopsis */}
                 <div className="space-y-2">
                   <Label htmlFor="synopsis">Short Synopsis *</Label>
-                  <Textarea 
+                  <Textarea
                     id="synopsis"
-                    name="synopsis" 
+                    name="synopsis"
                     placeholder="Brief description of your project (2-3 paragraphs)"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0 min-h-[120px]"
                     value={formData.synopsis}
@@ -331,14 +331,7 @@ const SubmissionForm = () => {
                     >
                       Submission Agreement
                     </Link>
-                    <a
-                      href="/documents/consent-form.pdf"
-                      className="text-primary hover:text-primary/80 underline block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Consent Form
-                    </a>
+
                   </div>
                 </div>
 
@@ -384,8 +377,8 @@ const SubmissionForm = () => {
                 </div>
 
                 {/* Submit Button */}
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 shadow-md transition-all duration-200 ease-out py-3 disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={isSubmitting}
                 >

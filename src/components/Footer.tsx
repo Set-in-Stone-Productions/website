@@ -22,7 +22,7 @@ export function Footer() {
               <a href="https://www.linkedin.com/company/set-in-stone-productions/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:contact@setinstoneproductions.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:contact@jbernsteinmedia.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={20} />
               </a>
             </div>
