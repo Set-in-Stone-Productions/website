@@ -9,7 +9,7 @@ If changes are requested while on a protected branch, inform the user:
 > "I'll switch to the DEV branch to make these changes."
 
 Then switch to `DEV` before proceeding.
-
+ 
 ## Development Workflow
 
 ### Preview the Website
