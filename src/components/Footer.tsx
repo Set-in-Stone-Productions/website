@@ -13,13 +13,13 @@ export function Footer() {
               Where Visions Sharpens Creation
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/set_in_stone_productions/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://youtube.com/@setinstoneproductions-p9x?si=aTlPrAjndkfiClw0" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Youtube size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/set-in-stone-productions/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="mailto:contact@setinstoneproductions.com" className="text-muted-foreground hover:text-primary transition-colors">
