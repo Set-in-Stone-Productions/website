@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <filter id="glass" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="1200" fill="#000000"/>
+  
+  <!-- Glass morphism effect -->
+  <rect x="200" y="400" width="800" height="400" fill="rgba(0, 0, 0, 0.6)" rx="20" filter="url(#glass)"/>
+  <rect x="200" y="400" width="800" height="400" fill="none" stroke="rgba(255, 111, 60, 0.2)" stroke-width="2" rx="20"/>
+  
+  <!-- Orange accent line at top -->
+  <rect x="200" y="400" width="800" height="2" fill="rgba(255, 111, 60, 0.8)"/>
+  
+  <!-- SNS Text -->
+  <text x="600" y="650" font-family="Arial, sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="#FFFFFF">SNS</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="720" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="rgba(255, 111, 60, 0.8)">Set in Stone Productions</text>
+</svg>
