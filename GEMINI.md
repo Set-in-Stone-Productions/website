@@ -40,4 +40,9 @@ When the user says **"SAVE AS A DRAFT"**:
 2. Do NOT push to `main`
 
 
+#### "RESET TO LAST SAVED VERSION"
+When the user says **"RESET TO LAST SAVED VERSION"**:
+1. Hard reset pull from the 'DEV' branch
+2. Clarify this only happened here locally! 
+
 Always explain to the user why you are doing things, they are nontechinical, be breif and concise.
