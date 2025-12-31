@@ -2,7 +2,7 @@
 
 ## Protected Branches
 **NEVER make code changes if you are on:**
-- `PROD` branch
+- `main` branch
 - Any `backup` branch (e.g., `backupDec30th`)
 
 If changes are requested while on a protected branch, inform the user:
@@ -22,11 +22,11 @@ pnpm dev
 
 #### "UPLOAD NOW"
 When the user says **"UPLOAD NOW"**:
-1. Push current changes to `PROD` branch
+1. Push current changes to `main` branch
 2. Then push the same changes to `DEV` branch
 3. Respond: "I will save this version to DEV as well for now!"
 
 #### "SAVE AS A DRAFT"
 When the user says **"SAVE AS A DRAFT"**:
 1. Push current changes to `DEV` branch only
-2. Do NOT push to `PROD`
+2. Do NOT push to `main`
