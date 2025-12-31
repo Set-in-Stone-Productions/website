@@ -306,12 +306,48 @@ const SubmissionForm = () => {
                   autoComplete="off"
                 />
 
+                {/* Required Documents */}
+                <div className="bg-card/40 p-6 rounded-lg border border-border">
+                  <h3 className="font-semibold mb-3 text-white">Required Documents</h3>
+                  <p className="text-sm text-gray-400 mb-4">
+                    Please review these documents before submitting:
+                  </p>
+                  <div className="space-y-2">
+                    <Link
+                      to="/terms-of-service"
+                      className="text-primary hover:text-primary/80 underline block"
+                    >
+                      Terms of Service
+                    </Link>
+                    <Link
+                      to="/privacy-policy"
+                      className="text-primary hover:text-primary/80 underline block"
+                    >
+                      Privacy Policy
+                    </Link>
+                    <Link
+                      to="/submission-agreement"
+                      className="text-primary hover:text-primary/80 underline block"
+                    >
+                      Submission Agreement
+                    </Link>
+                    <a
+                      href="/documents/consent-form.pdf"
+                      className="text-primary hover:text-primary/80 underline block"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Consent Form
+                    </a>
+                  </div>
+                </div>
+
                 {/* Legal Agreements */}
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <Checkbox 
-                      id="terms" 
-                      className="mt-1 border-primary/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary" 
+                    <Checkbox
+                      id="terms"
+                      className="mt-1 border-primary/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
                       checked={formData.termsAccepted}
                       onCheckedChange={handleCheckboxChange}
                     />
@@ -333,9 +369,9 @@ const SubmissionForm = () => {
                 {/* E-Signature */}
                 <div className="space-y-2">
                   <Label htmlFor="signature">Electronic Signature *</Label>
-                  <Input 
+                  <Input
                     id="signature"
-                    name="signature" 
+                    name="signature"
                     placeholder="Type your full name as your electronic signature"
                     className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-0"
                     value={formData.signature}
@@ -345,29 +381,6 @@ const SubmissionForm = () => {
                   <p className="text-sm text-muted-foreground">
                     By typing your name above, you are providing an electronic signature that is legally binding.
                   </p>
-                </div>
-
-                {/* Legal Links */}
-                <div className="bg-card/40 p-6 rounded-lg border border-border">
-                  <h3 className="font-semibold mb-3 text-white">Required Documents</h3>
-                  <p className="text-sm text-gray-400 mb-4">
-                    Please review these documents before submitting:
-                  </p>
-                  <div className="space-y-2">
-                    <Link 
-                      to="/submission-agreement" 
-                      className="text-primary hover:text-primary/80 underline block"
-                    >
-                      Submission Agreement
-                    </Link>
-                    <a 
-                      href="/documents/consent-form.pdf" 
-                      className="text-primary hover:text-primary/80 underline block"
-                      download
-                    >
-                      Consent Form
-                    </a>
-                  </div>
                 </div>
 
                 {/* Submit Button */}
