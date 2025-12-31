@@ -1,8 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext, useContext } from "react";
 
 interface SplashScreenProps {
   children: React.ReactNode;
 }
+
+interface SplashContextType {
+  animationsReady: boolean;
+}
+
+const SplashContext = createContext<SplashContextType>({ animationsReady: true });
+
+export const useSplashContext = () => useContext(SplashContext);
 
 const SPLASH_DURATION = 6000; // Adjust this to match your GIF duration in milliseconds
 const FADE_DURATION = 1000;
@@ -10,6 +18,10 @@ const FADE_DURATION = 1000;
 export const SplashScreen = ({ children }: SplashScreenProps) => {
   const [showSplash, setShowSplash] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [animationsReady, setAnimationsReady] = useState(() => {
+    // If splash was already seen, animations are ready immediately
+    return sessionStorage.getItem("hasSeenSplash") === "true";
+  });
 
   useEffect(() => {
     // Check if splash has already been shown this session
@@ -26,6 +38,7 @@ export const SplashScreen = ({ children }: SplashScreenProps) => {
       // Hide splash completely after fade animation
       const hideTimer = setTimeout(() => {
         setShowSplash(false);
+        setAnimationsReady(true);
         sessionStorage.setItem("hasSeenSplash", "true");
       }, SPLASH_DURATION + FADE_DURATION);
 
@@ -37,12 +50,19 @@ export const SplashScreen = ({ children }: SplashScreenProps) => {
   }, []);
 
   if (!showSplash) {
-    return <>{children}</>;
+    return (
+      <SplashContext.Provider value={{ animationsReady }}>
+        {children}
+      </SplashContext.Provider>
+    );
   }
 
   return (
-    <>
-      {/* Splash overlay */}
+    <SplashContext.Provider value={{ animationsReady }}>
+      {/* Solid black background - stays until splash fully removed */}
+      <div className="fixed inset-0 z-[9998] bg-black" />
+
+      {/* Splash GIF overlay */}
       <div
         className={`fixed inset-0 z-[9999] bg-black flex items-center justify-center transition-opacity duration-1000 ${
           fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
@@ -54,11 +74,6 @@ export const SplashScreen = ({ children }: SplashScreenProps) => {
           className="max-w-[80vw] max-h-[80vh] object-contain"
         />
       </div>
-
-      {/* Main content (hidden behind splash) */}
-      <div className={fadeOut ? "opacity-100" : "opacity-0"}>
-        {children}
-      </div>
-    </>
+    </SplashContext.Provider>
   );
 };

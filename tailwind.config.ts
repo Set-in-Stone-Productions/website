@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 				'open-sans': ['Open Sans', 'sans-serif'],
+				playfair: ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
