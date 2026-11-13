@@ -2,6 +2,7 @@ import teamMember1 from "@/assets/team-member-1.jpg";
 import teamMember2 from "@/assets/team-member-2.jpg";
 import teamMember3 from "@/assets/team-member-3.jpg";
 import teamMember4 from "@/assets/team-member-4.jpg";
+import teamMember5 from "@/assets/team-member-5.jpg";
 
 export function AboutSection() {
   const teamMembers = [
@@ -28,6 +29,12 @@ export function AboutSection() {
       role: "Senior Software Developer",
       image: teamMember4,
       bio: "Web developer and full-stack software engineer."
+    },
+    {
+      name: "Chase Kaiserman-Phelps",
+      role: "Social Media Strategist",
+      image: teamMember5,
+      bio: "Social media strategist helping build a digital presence, grow engaged audiences, and turn creative ideas into meaningful social media strategies."
     }
   ];
 
