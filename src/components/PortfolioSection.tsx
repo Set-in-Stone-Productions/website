@@ -87,7 +87,7 @@ export function PortfolioSection() {
       id: 6,
       title: "STUCK",
       date: "Coming Soon",
-      category: "Survival / Thriller",
+      category: "thriller",
       credits: "Director: Justin Ferrante",
       description: (
         <>

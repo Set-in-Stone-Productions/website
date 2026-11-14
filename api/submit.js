@@ -1,4 +1,4 @@
-const { google } = require('googleapis');
+import { google } from 'googleapis';
 
 // Simple in-memory rate limiting (resets on cold start)
 const rateLimit = new Map();
@@ -47,7 +47,7 @@ function formatTimestamp() {
   return now.toLocaleString('en-US', options);
 }
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
