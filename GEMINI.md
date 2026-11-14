@@ -48,12 +48,8 @@ When the user says **"RESET TO LAST SAVED VERSION"**:
 
 Always explain to the user why you are doing things, they are nontechinical, be breif and concise.
 
-## How the live site deploys
-- www.setinstoneproductions.com is the Vercel project `sns-web-dep` (team `jakebs-projects`). It deploys from the GitHub repo `jfbernstein2023-maker/SNSWeb`: a push to `main` goes live in about a minute, a push to `DEV` makes a preview.
-- Vercel only builds commits made by the account owner (`jfbernstein2023-maker`). Anyone else's commit shows "Deployment was blocked"; the owner then opens that deployment in Vercel and clicks Redeploy.
-- `Set-in-Stone-Productions/website` is a copy that does not deploy. Push the same commits there too.
-- Always pull before pushing, and never force-push: it deletes other people's work.
-- Pages use # addresses (`/#/portfolio`), so the site needs no `vercel.json`.
+## Deploy
+Push to `main` on `jfbernstein2023-maker/SNSWeb` and it goes live on www.setinstoneproductions.com in about a minute. Never force-push.
 
 ## Images
-- Never add camera-size pictures. Save each one as WebP at the size it is shown (at most 1600 px wide, 1920 px for full-screen backgrounds), about 50-200 KB (squoosh.app does this). Animations go in as MP4 video, never GIF.
+WebP at the size shown (max 1600 px wide), animations as MP4. Never camera-size photos or GIFs.
