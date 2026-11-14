@@ -68,9 +68,12 @@ export const SplashScreen = ({ children }: SplashScreenProps) => {
           fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        <img
-          src="/Set in Stone Logo.gif"
-          alt="Set in Stone Productions"
+        <video
+          src="/Set in Stone Logo.mp4"
+          aria-label="Set in Stone Productions"
+          autoPlay
+          muted
+          playsInline
           className="max-w-[80vw] max-h-[80vh] object-contain"
         />
       </div>

@@ -1,8 +1,8 @@
-import teamMember1 from "@/assets/team-member-1.jpg";
-import teamMember2 from "@/assets/team-member-2.jpg";
-import teamMember3 from "@/assets/team-member-3.jpg";
+import teamMember1 from "@/assets/team-member-1.webp";
+import teamMember2 from "@/assets/team-member-2.webp";
+import teamMember3 from "@/assets/team-member-3.webp";
 import teamMember4 from "@/assets/team-member-4.jpg";
-import teamMember5 from "@/assets/team-member-5.jpg";
+import teamMember5 from "@/assets/team-member-5.webp";
 
 export function AboutSection() {
   const teamMembers = [
@@ -84,6 +84,8 @@ export function AboutSection() {
                   <img 
                     src={member.image} 
                     alt={member.name}
+                            loading="lazy"
+                            decoding="async"
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

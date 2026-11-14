@@ -87,7 +87,7 @@ export function Navigation() {
                 onClick={() => window.scrollTo(0, 0)}
               >
                 <img
-                  src="/SITtopleftlogo.png"
+                  src="/SITtopleftlogo.webp"
                   alt="Set in Stone Productions"
                   className="h-16 md:h-24 w-auto"
                 />

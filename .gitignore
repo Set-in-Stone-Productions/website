@@ -28,4 +28,3 @@ docs
 *.json
 !package.json
 !tsconfig*.json
-!vercel.json

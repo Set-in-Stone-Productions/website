@@ -9,55 +9,55 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 // Balls of Steel images
-import ballsOfSteel1 from "@/assets/Balls of Steel/balls-of-steel-1.png";
-import ballsOfSteel2 from "@/assets/Balls of Steel/balls-of-steel-2.png";
-import ballsOfSteel3 from "@/assets/Balls of Steel/balls-of-steel-3.png";
-import ballsOfSteel4 from "@/assets/Balls of Steel/balls-of-steel-4.png";
-import ballsOfSteel5 from "@/assets/Balls of Steel/balls-of-steel-5.png";
-import ballsOfSteel6 from "@/assets/Balls of Steel/balls-of-steel-6.png";
-import ballsOfSteel7 from "@/assets/Balls of Steel/balls-of-steel-7.png";
-import ballsOfSteel8 from "@/assets/Balls of Steel/balls-of-steel-8.png";
-import ballsOfSteel9 from "@/assets/Balls of Steel/balls-of-steel-9.png";
+import ballsOfSteel1 from "@/assets/Balls of Steel/balls-of-steel-1.webp";
+import ballsOfSteel2 from "@/assets/Balls of Steel/balls-of-steel-2.webp";
+import ballsOfSteel3 from "@/assets/Balls of Steel/balls-of-steel-3.webp";
+import ballsOfSteel4 from "@/assets/Balls of Steel/balls-of-steel-4.webp";
+import ballsOfSteel5 from "@/assets/Balls of Steel/balls-of-steel-5.webp";
+import ballsOfSteel6 from "@/assets/Balls of Steel/balls-of-steel-6.webp";
+import ballsOfSteel7 from "@/assets/Balls of Steel/balls-of-steel-7.webp";
+import ballsOfSteel8 from "@/assets/Balls of Steel/balls-of-steel-8.webp";
+import ballsOfSteel9 from "@/assets/Balls of Steel/balls-of-steel-9.webp";
 
 // Ex Oblivione images
-import exOblivione1 from "@/assets/Ex Oblivione/ex-oblivione-1.png";
-import exOblivione2 from "@/assets/Ex Oblivione/ex-oblivione-2.png";
-import exOblivione3 from "@/assets/Ex Oblivione/ex-oblivione-3.png";
-import exOblivione4 from "@/assets/Ex Oblivione/ex-oblivione-4.png";
-import exOblivione5 from "@/assets/Ex Oblivione/ex-oblivione-5.png";
-import exOblivione6 from "@/assets/Ex Oblivione/ex-oblivione-6.png";
-import exOblivione7 from "@/assets/Ex Oblivione/ex-oblivione-7.png";
-import exOblivione8 from "@/assets/Ex Oblivione/ex-oblivione-8.png";
+import exOblivione1 from "@/assets/Ex Oblivione/ex-oblivione-1.webp";
+import exOblivione2 from "@/assets/Ex Oblivione/ex-oblivione-2.webp";
+import exOblivione3 from "@/assets/Ex Oblivione/ex-oblivione-3.webp";
+import exOblivione4 from "@/assets/Ex Oblivione/ex-oblivione-4.webp";
+import exOblivione5 from "@/assets/Ex Oblivione/ex-oblivione-5.webp";
+import exOblivione6 from "@/assets/Ex Oblivione/ex-oblivione-6.webp";
+import exOblivione7 from "@/assets/Ex Oblivione/ex-oblivione-7.webp";
+import exOblivione8 from "@/assets/Ex Oblivione/ex-oblivione-8.webp";
 
 // Routine images
-import routine1 from "@/assets/Routine/routine-1.png";
-import routine2 from "@/assets/Routine/routine-2.png";
-import routine3 from "@/assets/Routine/routine-3.png";
-import routine4 from "@/assets/Routine/routine-4.png";
+import routine1 from "@/assets/Routine/routine-1.webp";
+import routine2 from "@/assets/Routine/routine-2.webp";
+import routine3 from "@/assets/Routine/routine-3.webp";
+import routine4 from "@/assets/Routine/routine-4.webp";
 
 // Craig Likes Badmitten images
-import craigLikesBadmitten1 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-1.png";
-import craigLikesBadmitten2 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-2.png";
-import craigLikesBadmitten3 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-3.png";
-import craigLikesBadmitten4 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-4.png";
-import craigLikesBadmitten5 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-5.png";
-import craigLikesBadmitten6 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-6.png";
-import craigLikesBadmitten7 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-7.png";
+import craigLikesBadmitten1 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-1.webp";
+import craigLikesBadmitten2 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-2.webp";
+import craigLikesBadmitten3 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-3.webp";
+import craigLikesBadmitten4 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-4.webp";
+import craigLikesBadmitten5 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-5.webp";
+import craigLikesBadmitten6 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-6.webp";
+import craigLikesBadmitten7 from "@/assets/CRAIG LIKES BADMITTEN/craig-likes-badmitten-7.webp";
 
 // Tunnel Rat images
-import tunnelRat1 from "@/assets/Tunnel Rat/1.png";
-import tunnelRat2 from "@/assets/Tunnel Rat/2.png";
-import tunnelRat3 from "@/assets/Tunnel Rat/3.png";
-import tunnelRat4 from "@/assets/Tunnel Rat/4.png";
-import tunnelRat5 from "@/assets/Tunnel Rat/5.png";
+import tunnelRat1 from "@/assets/Tunnel Rat/1.webp";
+import tunnelRat2 from "@/assets/Tunnel Rat/2.webp";
+import tunnelRat3 from "@/assets/Tunnel Rat/3.webp";
+import tunnelRat4 from "@/assets/Tunnel Rat/4.webp";
+import tunnelRat5 from "@/assets/Tunnel Rat/5.webp";
 
 // STUCK images
-import stuck1 from "@/assets/STUCK/1.jpg";
-import stuck2 from "@/assets/STUCK/2.jpg";
-import stuck3 from "@/assets/STUCK/3.png";
-import stuck4 from "@/assets/STUCK/4.png";
-import stuck5 from "@/assets/STUCK/5.jpg";
-import stuck6 from "@/assets/STUCK/6.png";
+import stuck1 from "@/assets/STUCK/1.webp";
+import stuck2 from "@/assets/STUCK/2.webp";
+import stuck3 from "@/assets/STUCK/3.webp";
+import stuck4 from "@/assets/STUCK/4.webp";
+import stuck5 from "@/assets/STUCK/5.webp";
+import stuck6 from "@/assets/STUCK/6.webp";
 
 export function PortfolioSection() {
   const [selectedCategory, setSelectedCategory] = useState("all");

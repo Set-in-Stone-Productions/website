@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { useSplashContext } from "./SplashScreen";
 
 const heroImages = [
-  "/splashpage/hero-3.png",
-  "/splashpage/hero-5.png",
+  "/splashpage/hero-3.webp",
+  "/splashpage/hero-5.webp",
 ];
 
 export function HeroSection() {
@@ -31,7 +31,7 @@ export function HeroSection() {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className={`mb-3 ${animationsReady ? "animate-fade-up" : "opacity-0"}`}>
           <img
-            src="/SIT Logo Black copy.png"
+            src="/SIT Logo Black copy.webp"
             alt="Set in Stone Productions"
             className="h-44 md:h-64 w-auto mx-auto drop-shadow-2xl"
           />
